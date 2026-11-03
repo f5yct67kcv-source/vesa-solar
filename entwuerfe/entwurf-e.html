@@ -21,12 +21,21 @@ h1,h2,h3,.num{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-
 header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:96px}
 .logo img{height:72px;display:block;filter:var(--logo)}
-nav{display:flex;gap:28px;font-weight:500;align-items:center;font-size:16px}
+nav.desk{display:flex;gap:28px;font-weight:500;align-items:center;font-size:16px}
 nav a.cta{background:var(--fg);color:var(--inv);padding:11px 20px}
 .sw{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:6px 10px;cursor:pointer;background:none;color:var(--fg);font:inherit;font-size:13px}
 .sw i{width:34px;height:18px;border-radius:9px;background:var(--light);position:relative;display:inline-block}
 .sw i::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--fg);transition:left .2s}
 :root[data-theme="dark"] .sw i::after{left:18px}
+.burger{display:none;width:52px;height:52px;border:0;background:none;cursor:pointer;position:relative;color:var(--fg)}
+.burger i{position:absolute;left:12px;right:12px;height:2px;background:currentColor;transition:transform .25s,opacity .2s}
+.burger i:nth-child(1){top:17px}.burger i:nth-child(2){top:25px}.burger i:nth-child(3){top:33px}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.mob{display:none}
+.mob .sw .lbl-l,.mob .sw .lbl-d{font-size:15px;color:var(--mute)}
+:root:not([data-theme="dark"]) .mob .sw .lbl-l,:root[data-theme="dark"] .mob .sw .lbl-d{color:var(--fg);font-weight:600}
 .hero .wrap{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;padding:0}
 .hero .txt{padding:88px 56px 88px 32px;display:flex;flex-direction:column;justify-content:center}
 .kicker{color:var(--mute);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:22px}
@@ -126,7 +135,19 @@ h2{font-size:clamp(36px,4vw,58px);max-width:16ch}
 footer{padding:32px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:900px){
- .wrap{padding:0 18px} nav a:not(.cta){display:none} header .wrap{height:80px} .logo img{height:58px} .sw span{display:none}
+ .wrap{padding:0 18px} nav.desk{display:none} .burger{display:block;margin-right:-10px}
+ header{border-bottom:0} header .wrap{height:112px} .logo img{height:88px}
+ .mob{display:block;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(0,0,0,.18);padding:4px 18px 26px;max-height:calc(100vh - 112px);overflow:auto;transform:translateY(-8px);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility 0s .25s}
+ .mob.open{transform:none;opacity:1;visibility:visible;transition:transform .25s,opacity .25s}
+ .mob-nav a{display:block;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:30px;line-height:1.1;padding:13px 0;border-bottom:1px solid var(--line)}
+ .mob-k{padding:22px 0 18px;border-bottom:1px solid var(--line)}
+ .mob-k .kicker{margin-bottom:10px;display:block}
+ .mob-k a{display:block;font-size:18px;padding:3px 0}
+ .mob-k a.tel{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:32px;padding:0 0 4px}
+ .mob-k .adr{display:block;color:var(--mute);font-size:15px;margin-top:4px}
+ .mob-sw{display:flex;align-items:center;justify-content:space-between;padding-top:18px;color:var(--mute)}
+ .mob-sw .sw{border:0;padding:8px 0;gap:10px}
+ body.menu-open{overflow:hidden}
  .hero .wrap{grid-template-columns:1fr} .hero .txt{padding:48px 18px 40px} .hero .pic{min-height:520px}
  .live{left:14px;right:14px;top:auto;bottom:14px;width:auto} .tri{display:none}
  .stats .wrap{grid-template-columns:1fr 1fr} .stat{padding:26px 0 22px} .stat+.stat{border-left:0;padding-left:0} .stat:nth-child(even){border-left:1px solid var(--bandline);padding-left:20px} .stat .num{font-size:50px}
@@ -139,7 +160,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <body>
 <header><div class="wrap">
  <a class="logo" href="#"><img src="../marke/vesa-logo.svg" alt="VeSa Solar GmbH"></a>
- <nav><a href="#dach">Dein Dach</a><a href="#system">Montagesystem</a><a href="#daecher">Dächer</a><a href="#team">Team</a><button class="sw" id="sw" type="button" aria-label="Hell oder dunkel"><span>Hell / Dunkel</span><i></i></button><a class="cta" href="#">062 777 28 48</a></nav>
+ <nav class="desk"><a href="#dach">Dein Dach</a><a href="#system">Montagesystem</a><a href="#daecher">Dächer</a><a href="#team">Team</a><button class="sw" type="button" aria-label="Hell oder dunkel"><span>Hell / Dunkel</span><i></i></button><a class="cta" href="tel:+41627772848">062 777 28 48</a></nav>
+ <button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mob"><i></i><i></i><i></i></button>
+</div>
+<div class="mob" id="mob">
+ <nav class="mob-nav"><a href="#dach">Dein Dach</a><a href="#system">Montagesystem</a><a href="#daecher">Dächer</a><a href="#team">Team</a></nav>
+ <div class="mob-k" id="kontakt-mob">
+  <span class="kicker">Kontakt</span>
+  <a class="tel" href="tel:+41627772848">062 777 28 48</a>
+  <a href="mailto:info@vesa-solar.ch">info@vesa-solar.ch</a>
+  <span class="adr">Rütiweg 6, 5706 Boniswil AG</span>
+ </div>
+ <div class="mob-sw"><span>Darstellung</span><button class="sw" type="button" aria-label="Hell oder dunkel"><span class="lbl-l">Hell</span><i></i><span class="lbl-d">Dunkel</span></button></div>
 </div></header>
 
 <div class="hero"><div class="wrap">
@@ -286,7 +318,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
  </div>
 </div></section>
 
-<div class="cta"><div class="wrap">
+<div class="cta" id="kontakt"><div class="wrap">
  <div class="box"><div class="kicker" style="color:#999999">Für Hausbesitzer</div><h2>Schick uns ein Foto von deinem Dach. Sandro schaut es an.</h2><p>Oder nimm die Zahlen von oben mit: Wir sagen dir, was wirklich draufpasst und was die Montage kostet.</p><div class="btns"><a class="btn p" href="#dach">Dach prüfen</a><a class="btn" href="#">062 777 28 48</a></div></div>
  <div class="box"><div class="kicker" style="color:#999999">Für Solarteure, Elektriker, Dachdecker</div><h2>Montagekapazität mit Erfahrung.</h2><p>Du verkaufst und planst, wir montieren. Eigenes Sicherheitskonzept, Gerüst und Helikopter über Partner.</p><a class="btn" href="#">Montagepartner werden</a><ul><li><b>scaffs</b> Gerüst</li><li><b>Brechbühl</b> Holzbau</li><li><b>del Sole</b> Elektro</li><li><b>Swiss Helicopter</b></li><li><b>9.81</b> Sicherheit</li><li><b>Swissolar</b> Mitglied</li></ul></div>
 </div></div>
@@ -296,9 +328,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 /* ---------- Hell / Dunkel ---------- */
 (function(){
  const r=document.documentElement, q=new URLSearchParams(location.search);
- let t=q.get('theme')||localStorage.getItem('vesa-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+ let ls=null;try{ls=localStorage.getItem('vesa-theme')}catch(e){}
+ let t=q.get('theme')||ls||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
  r.dataset.theme=t;
- document.getElementById('sw').onclick=()=>{t=r.dataset.theme==='dark'?'light':'dark';r.dataset.theme=t;localStorage.setItem('vesa-theme',t)};
+ document.querySelectorAll('.sw').forEach(b=>b.onclick=()=>{t=r.dataset.theme==='dark'?'light':'dark';r.dataset.theme=t;try{localStorage.setItem('vesa-theme',t)}catch(e){}});
+})();
+/* ---------- Menü auf dem Handy ---------- */
+(function(){
+ const b=document.getElementById('burger'), m=document.getElementById('mob');
+ const set=o=>{b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen');m.classList.toggle('open',o);document.body.classList.toggle('menu-open',o)};
+ b.onclick=()=>set(b.getAttribute('aria-expanded')!=='true');
+ m.querySelectorAll('.mob-nav a').forEach(a=>a.onclick=()=>set(false));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
+ matchMedia('(min-width:901px)').addEventListener('change',e=>{if(e.matches)set(false)});
+ const q=new URLSearchParams(location.search); if(q.get('menu')==='1') set(true);
 })();
 
 /* ---------- Sonnenstand (NOAA, vereinfacht) für Boniswil ---------- */

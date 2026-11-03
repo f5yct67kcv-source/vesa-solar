@@ -42,3 +42,15 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   nicht gebaut: Schweizer Karte mit allen Dächern, Baustellen-Ticker aus
   Instagram, Schnittzeichnung auch für Indach und Flachdach, «kW jetzt» in der
   Nacht durch den Tageshöchstwert ersetzen.
+- [x] **VES-015** · 03.11.2026 · **Kopf auf dem Handy** nach Adrians
+  Bildschirmfoto: «Das Logo präsenter, grösser. Trennstrich weg. Hamburger
+  Menu mit Dropdown, dort auch hell/dunkel. Tel. Nr. in Kontakt». Entwurf E,
+  nur unter 900 px Breite: Logo 88 px statt 58 px hoch, Kopf ohne Linie,
+  Telefonknopf raus. Neu ein Hamburger rechts, der sich zum Kreuz dreht, und
+  ein Dropdown mit den vier Menüpunkten, einem Block «Kontakt» (Telefon gross
+  und anwählbar, E-Mail, Adresse) und dem Schalter «Darstellung Hell /
+  Dunkel». Ein Menüpunkt «Kontakt» war zuerst auch drin, ist wieder raus,
+  weil er den Kontaktblock doppelte. Menü schliesst beim Antippen eines
+  Punkts und mit Escape. Desktop unverändert, dort ist die Nummer jetzt
+  ebenfalls anwählbar. Geprüft mit Playwright auf 390 px, hell und dunkel,
+  offen und zu, ohne Skriptfehler. Renderings in `entwuerfe/bilder/`.
