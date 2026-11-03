@@ -112,3 +112,28 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Telefonknopf traf. Geprüft hell und dunkel, Desktop und Handy, ohne
   Skriptfehler. Renderings `entwuerfe/bilder/verlauf-*.jpg`. Offen: Adrian
   wählt eine Variante oder verwirft die Idee.
+- [x] **VES-017** · 03.11.2026 · **Verlauf vorerst verworfen** (Adrian:
+  «Vorerst verwerfen, passt nicht»). Löst VES-016 ab. Die Datei
+  `entwuerfe/entwurf-e-verlauf.html` bleibt als Beleg liegen, in der
+  Übersicht als verworfen markiert.
+- [ ] **VES-018** · 03.11.2026 · **Foto im Kopf, als Einzelbild oder
+  Slider** (Adrian, mit Bildschirmfoto des Vorschlags für Ammann
+  Raumgestalter: «Ich möchte bereits im Hero-Bereich ein Foto verwenden oder
+  sogar Slider-Foto»). Eigene Datei `entwuerfe/entwurf-e-hero.html`, Entwurf
+  E bleibt unverändert. `?hero=1` ein Foto, `?hero=2` Slider mit vier
+  Dächern (Luzern Steildach, Muri Flachdach, Spreitenbach Industrie, Zürich
+  Indach), Wechsel alle 6 s mit leichtem Heranzoomen, Balken mit
+  Fortschritt zum Antippen, Wischen auf dem Handy, Pause bei verstecktem
+  Tab, kein automatischer Wechsel bei «Bewegung reduzieren». Karte oben
+  rechts mit Ort, Dachart, Modulzahl und Link zu allen Dächern. Der Kopf ist
+  in hell und dunkel dunkel hinterlegt, weil das Foto in Dunkel ausläuft.
+  Handy: Foto zuoberst, Titel im Übergang, breiter runder Knopf «Dein Dach
+  prüfen», darunter «15 Jahre auf dem Dach», «Mitglied Swissolar», ein
+  kurzer Live-Hinweis zur Sonne und die Balken, alles im ersten Bildschirm
+  (Balken enden bei 787 von 844 px). Desktop: Foto über die ganze Breite,
+  Text links auf Abdunklung, Live-Tafel rechts unten. Modulzahlen ausser
+  Muri und Luzern geschätzt. Geprüft hell und dunkel, Handy und Desktop,
+  ohne Skriptfehler, Taktung gemessen (Wechsel nach 6 s, Antippen springt
+  sofort). Renderings `entwuerfe/bilder/kopf-*.jpg`. Offen: Adrian wählt
+  Foto oder Slider, dann kommt es in Entwurf E. Später mit den eigenen
+  Auftragsfotos (VES-012).
