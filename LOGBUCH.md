@@ -32,16 +32,56 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   als Vektor (SVG oder PDF), Fotos in Originalgrösse, Zustimmung der
   Mitarbeitenden für Fotos auf der Seite. Bis dahin sind alle Zahlen ausser
   Muri 292 und Luzern 189 Module geschätzt.
-- [ ] **VES-007** · 03.11.2026 · Eigenes Repository angelegt (Adrian: «repo
+- [x] **VES-007** · 03.11.2026 · Eigenes Repository angelegt (Adrian: «repo
   ist angelegt»), Stand der Entwürfe aus formateins übernommen, erster Commit
   auf `main`. Kein Deploy. Offen: Vorschau. Vorschlag GitHub Pages auf `main`
   einschalten (Settings → Pages), dann ist Entwurf E mit funktionierender
   Dach-Abfrage als Link zu öffnen; das Repository ist öffentlich, die Fotos
-  stammen von der heutigen öffentlichen Seite. Entscheid Adrian.
+  stammen von der heutigen öffentlichen Seite. Entscheid Adrian. Erledigt:
+  Adrian hat Pages auf `main` eingeschaltet, Vorschau unter
+  `https://f5yct67kcv-source.github.io/vesa-solar/entwuerfe/` (Antwort 200).
 - [ ] **VES-008** · 03.11.2026 · Ideen für weitere technische Teile, noch
   nicht gebaut: Schweizer Karte mit allen Dächern, Baustellen-Ticker aus
   Instagram, Schnittzeichnung auch für Indach und Flachdach, «kW jetzt» in der
   Nacht durch den Tageshöchstwert ersetzen.
+- [x] **VES-009** · 03.11.2026 · **Logo als Vektor selbst erzeugt** (Adrian:
+  «VeSa Vektor selbst erzeugen»). Dreieck exakt als Geometrie nachgebaut:
+  gleichseitig, neun Dreiecke in drei Reihen, Farben gemessen und als
+  Prozent Schwarz bestätigt (K20 `#cccccc`, K30 `#b3b3b3`, K40 `#999999`,
+  K50 `#808080`, K70 `#4d4d4d`, K90 `#1a1a1a`). Schrift «VeSa» und «Solar
+  GmbH» aus dem PNG in sechsfacher Auflösung nachgezeichnet (potrace).
+  Abweichung zum Original: 0,14 % der Pixel, nur an Kanten. Dateien in
+  `marke/`: `vesa-logo.svg`, `vesa-logo-negativ.svg` (Grautöne gespiegelt wie
+  in Entwurf D dunkel), `vesa-bildmarke.svg`, `favicon.svg`, dazu PNG mit
+  2000 px. Entwürfe D und E nutzen jetzt das SVG und die exakten Grautöne,
+  E hat das Favicon. Beleg `28c0504`. Offen: Ob das Negativ so bleiben soll
+  oder das Dreieck im Original-Grau auf dunklem Grund steht, ist eine Frage
+  an VeSa.
+- [x] **VES-010** · 03.11.2026 · Adrian: «freigabe bestätigt». Verstanden als
+  Einverständnis für Fotos des Teams auf der Seite (Teil von VES-006). Offen
+  aus VES-006 bleiben die Anlagenliste und die Fotos in Originalgrösse.
+- [x] **VES-011** · 03.11.2026 · **Fehler in der Live-Tafel** behoben: Die
+  Formel für das Julianische Datum lag einen halben Tag daneben, darum stand
+  die Sonne um 10 Uhr bei −50° und Auf- und Untergang waren vertauscht.
+  Geprüft gegen bekannte Werte: 21. Juni 13:30 Höhe 66,1°, 21. Dezember 12:20
+  Höhe 19,2°, 3. November Aufgang 07:14, Untergang 17:08. Tagesbogen rechnet
+  in Zürcher Zeit, auch für Besucher in anderen Zeitzonen. Nachts zeigt die
+  Zählerleiste den Wert von heute Mittag statt 0 kW (aus VES-008). Beleg
+  `28c0504`.
+- [ ] **VES-012** · 03.11.2026 · **Auftragsfotos von Adrian**: 98 Fotos vom
+  18.06.2026 im Google-Drive-Ordner «VESA Solar» (A7408035 bis A7408132,
+  je 6 bis 23 MB). Der Drive-Zugang dieser Sitzung bricht bei Dateien dieser
+  Grösse ab, und ohne Freigabe leitet Google auf die Anmeldung um. Offen:
+  Adrian gibt den Ordner per Link frei («Jeder mit dem Link, Betrachter») oder
+  legt verkleinerte Kopien (etwa 2500 px) ab. Dann Auswahl und Einbau.
+- [ ] **VES-013** · 03.11.2026 · **Gruppenfoto des Teams fehlt** (Adrian:
+  «Gruppe, Team fehlt noch»). Für die Startseite (Team-Block) und «Über uns».
+  Offen: Termin mit VeSa, Bildliste vorher abstimmen.
+- [ ] **VES-014** · 03.11.2026 · Adrian fragt nach dem Grund für Astro.
+  Begründung im Chat: Datenblatt pro Dach aus einer Vorlage, Bilder
+  automatisch verkleinert, Bausteine einmal gebaut, Zähler aus der Liste.
+  Entscheidende Frage: Bekommt jedes Dach eine eigene Seite? Entscheid HTML
+  oder Astro weiter offen (VES-005).
 - [x] **VES-015** · 03.11.2026 · **Kopf auf dem Handy** nach Adrians
   Bildschirmfoto: «Das Logo präsenter, grösser. Trennstrich weg. Hamburger
   Menu mit Dropdown, dort auch hell/dunkel. Tel. Nr. in Kontakt». Entwurf E,
@@ -53,4 +93,4 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   weil er den Kontaktblock doppelte. Menü schliesst beim Antippen eines
   Punkts und mit Escape. Desktop unverändert, dort ist die Nummer jetzt
   ebenfalls anwählbar. Geprüft mit Playwright auf 390 px, hell und dunkel,
-  offen und zu, ohne Skriptfehler. Renderings in `entwuerfe/bilder/`.
+  offen und zu, ohne Skriptfehler. Renderings in `entwuerfe/bilder/`. Beleg `9dbc19c`.
