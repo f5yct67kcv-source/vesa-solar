@@ -3,18 +3,20 @@
 
 Nimmt Originale (JPG, auch 20 MB aus der Kamera), dreht sie nach EXIF richtig,
 entfernt die Metadaten (GPS, Kamera) und schreibt WebP in drei Breiten für
-srcset: 3200, 2400, 1600 und 900 px. Dazu ein Kontaktbogen zur Auswahl.
+srcset: 3840, 2400, 1600 und 900 px, nach dem Verkleinern leicht nachgeschärft. Dazu ein Kontaktbogen zur Auswahl.
 
     python3 werkzeuge/fotos-aufbereiten.py ORDNER_MIT_ORIGINALEN fotos/auftrag
 
-Ergebnis: fotos/auftrag/NAME-3200.webp, -2400.webp, -1600.webp, -900.webp und
+Ergebnis: fotos/auftrag/NAME-3840.webp, -2400.webp, -1600.webp, -900.webp und
 fotos/auftrag/kontaktbogen.jpg. Die Originale bleiben, wo sie sind, und
 kommen nicht ins Repository.
 """
 import sys, pathlib
-from PIL import Image, ImageOps, ImageDraw
+from PIL import Image, ImageOps, ImageDraw, ImageFilter
 
-BREITEN = (3200, 2400, 1600, 900)
+BREITEN = (3840, 2400, 1600, 900)
+# Nach dem Verkleinern leicht nachschärfen, sonst wirkt das Bild weich.
+SCHAERFEN = ImageFilter.UnsharpMask(radius=1.0, percent=70, threshold=2)
 QUALITAET = 82
 
 def aufbereiten(quelle: pathlib.Path, ziel: pathlib.Path):
@@ -30,6 +32,7 @@ def aufbereiten(quelle: pathlib.Path, ziel: pathlib.Path):
             k = im.copy()
             if k.width > b:
                 k = k.resize((b, round(k.height * b / k.width)), Image.LANCZOS)
+            k = k.filter(SCHAERFEN)
             k.save(ziel / f'{name}-{b}.webp', 'WEBP', quality=QUALITAET, method=6)
         groesse = sum((ziel / f'{name}-{b}.webp').stat().st_size for b in BREITEN) // 1024
         print(f'{p.name}: {im.width}x{im.height} -> {name}-*.webp ({groesse} KB zusammen)')

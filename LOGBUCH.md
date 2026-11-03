@@ -240,3 +240,21 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   (`entwuerfe/bilder/schaerfe-vergleich.jpg`). Fünf Slider-Bilder neu
   aufbereitet, zusammen 4,4 MB in vier Grössen; ein Handy lädt pro Bild
   etwa 100 bis 330 KB.
+- [ ] **VES-026** · 03.11.2026 · **Webseite immer noch unscharf** (Adrian,
+  Screenshot vom Mac neben seiner Vorlage: «vergleiche mal die Bilder!!
+  Webseite ist doch nicht scharf?»). Gemessen statt behauptet: Sein Fenster
+  ist rund 1920 CSS-Pixel breit mit Retina, das Bild füllt den Kopf über die
+  ganze Breite und wird darum fast in Originalgrösse gezeigt; seine Vorlage
+  zeigt das ganze Foto nur 1536 px breit. Die Datei auf der Seite ist so
+  scharf wie das Original (Gesichtsvergleich
+  `entwuerfe/bilder/gesicht-original-datei-screenshot.jpg`), aber das
+  Original A7408112 ist bei 100 % selbst weich: Arme in Bewegung, Gesicht
+  leicht unscharf. Gross gezeigt wird das sichtbar. Massnahmen:
+  `werkzeuge/fotos-aufbereiten.py` schärft nach dem Verkleinern leicht nach
+  (Unscharf maskieren, Radius 1, 70 %), grösste Fassung 3840 statt 3200 px
+  für 1920er Retina-Bildschirme, alle Slider-Bilder neu. Schärfe aller
+  Aufnahmen der Serie gemessen: A7408113 und A7408114 (eine Sekunde später)
+  sind etwa doppelt so scharf wie 112. A7408113 links ohne Kamin
+  zugeschnitten als `modul-griff`, in der Vorschau anwählbar mit
+  `?erstes=113`. Vergleich `entwuerfe/bilder/vergleich-112-113-*.jpg`.
+  Offen: Adrian wählt 112 (nachgeschärft) oder 113.
