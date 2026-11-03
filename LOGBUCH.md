@@ -94,3 +94,21 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Punkts und mit Escape. Desktop unverändert, dort ist die Nummer jetzt
   ebenfalls anwählbar. Geprüft mit Playwright auf 390 px, hell und dunkel,
   offen und zu, ohne Skriptfehler. Renderings in `entwuerfe/bilder/`. Beleg `9dbc19c`.
+- [ ] **VES-016** · 03.11.2026 · **Logofarben als Verlauf über die ganze
+  Seite**, Beispiele zur Wahl (Adrian: «Ich möchte die Farben des Logos auch
+  im Verlauf des Hintergrund, verteilt auf die ganze Seite … Zeig mir mal
+  Beispiele»). Eigene Datei `entwuerfe/entwurf-e-verlauf.html`, Entwurf E
+  bleibt unverändert. Idee: Die Seite steigt das Dreieck hinab, oben hell wie
+  die Spitze, unten dunkel wie die Basis. Hell: Weiss, Weiss, K20, K30, K40,
+  K50, K70, K90, K100 auf die neun Abschnitte. Dunkel: K90 und K70 im
+  Wechsel, unten K100. Schrift wechselt ab K70 auf Weiss, bis K50 bleibt sie
+  schwarz. Drei Varianten über `?bg=`: **1 Fliessend** (weicher Verlauf,
+  jede Farbe in der Mitte ihres Abschnitts), **2 Stufen** (jeder Abschnitt
+  eine Fläche), **3 Facetten** (Dreiecksraster wie im Logo, Grauton nach
+  Höhe, je eine Stufe heller oder dunkler, halb deckend über dem Verlauf).
+  Karten werden durchscheinend, der Kopf nimmt die Farbe oben an und ist
+  leicht unscharf hinterlegt. Fehler beim ersten Rendern behoben: Der
+  Kontaktblock bekam die falsche Schriftfarbe, weil `.cta` zuerst den
+  Telefonknopf traf. Geprüft hell und dunkel, Desktop und Handy, ohne
+  Skriptfehler. Renderings `entwuerfe/bilder/verlauf-*.jpg`. Offen: Adrian
+  wählt eine Variante oder verwirft die Idee.
