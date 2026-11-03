@@ -258,3 +258,11 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   zugeschnitten als `modul-griff`, in der Vorschau anwählbar mit
   `?erstes=113`. Vergleich `entwuerfe/bilder/vergleich-112-113-*.jpg`.
   Offen: Adrian wählt 112 (nachgeschärft) oder 113.
+- [x] **VES-027** · 03.11.2026 · **Team-Bild aus dem Slider entfernt**
+  (Adrian, Screenshot des Bilds «Oben nimmt das Team sie an», A7408110:
+  «dieses foto entfernen!»). Aus `entwuerfe/entwurf-e.html` genommen, die
+  Dateien `fotos/auftrag/team-geruest-*.webp` gelöscht, Kontaktbogen neu.
+  Der Slider zeigt jetzt vier Bilder: Module per Drohne, Pilot auf dem
+  Kamin, Unterbau, Drohne startklar. Wechsel im Browser geprüft, keine
+  Skriptfehler, keine fehlenden Dateien. Die Wahl 112 oder 113 für das
+  erste Bild bleibt offen (VES-026).
