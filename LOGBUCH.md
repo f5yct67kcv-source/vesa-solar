@@ -68,7 +68,7 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   in Zürcher Zeit, auch für Besucher in anderen Zeitzonen. Nachts zeigt die
   Zählerleiste den Wert von heute Mittag statt 0 kW (aus VES-008). Beleg
   `28c0504`.
-- [ ] **VES-012** · 03.11.2026 · **Auftragsfotos von Adrian**: 98 Fotos vom
+- [x] **VES-012** · 03.11.2026 · **Auftragsfotos von Adrian**: 98 Fotos vom
   18.06.2026 im Google-Drive-Ordner «VESA Solar» (A7408035 bis A7408132,
   je 6 bis 23 MB). Der Drive-Zugang dieser Sitzung bricht bei Dateien dieser
   Grösse ab, und ohne Freigabe leitet Google auf die Anmeldung um. Offen:
@@ -145,7 +145,7 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Metadaten (GPS, Kamera), schreibt WebP in 2400, 1600 und 900 px für
   `srcset` und einen Kontaktbogen zur Auswahl. An zwei Fotos geprüft.
   Renderings von E neu, hell und dunkel, ohne Skriptfehler.
-- [ ] **VES-020** · 03.11.2026 · **Adrians Fotos in den Slider**. Weiterhin
+- [x] **VES-020** · 03.11.2026 · **Adrians Fotos in den Slider**. Weiterhin
   blockiert wie in VES-012: Der Drive-Ordner «VESA Solar» ist privat (Google
   leitet auf die Anmeldung um, um 12:20 erneut geprüft), und der
   Drive-Zugang dieser Sitzung bricht bei Dateien ab etwa 6 MB ab.
@@ -157,3 +157,26 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Skript aufbereiteten WebP ohne Metadaten. Danach Kontaktbogen zeigen,
   Adrian wählt die vier bis sechs Slider-Bilder und je Bild Ort, Dachart
   und Modulzahl.
+- [x] **VES-021** · 03.11.2026 · **Slider mit Adrians Fotos**, erledigt
+  damit VES-012 und VES-020. Adrian hat den Drive-Ordner per Link
+  freigegeben («Link geändert»). Alle 98 Fotos geladen (1,6 GB, alle gültig,
+  Sony ILCE-7M4, 18.06.2026, 07:29 bis 12:58). Sie zeigen einen Montagetag:
+  Unterbau am Morgen, Transportdrohne auf der Wiese, Pilot auf dem Kamin,
+  Module hängen an der Drohne, das Team nimmt sie auf dem Gerüst an. Fünf
+  Bilder für den Slider gewählt, das stärkste zuerst: A7408094 «Module
+  kommen per Drohne aufs Dach» (09:52), A7408110 «Oben nimmt das Team sie
+  an» (10:10), A7408084 «Der Pilot fliegt vom Kamin aus» (09:44), A7408043
+  «Unterbau ab halb acht» (07:33), A7408062 «Drohne startklar» (09:06).
+  Balken: Drohne, Team, Pilot, Unterbau, Start. Aufbereitet mit
+  `werkzeuge/fotos-aufbereiten.py` nach `fotos/auftrag/`, je 900, 1600 und
+  2400 px, ohne Metadaten, zusammen 1,8 MB; im Slider mit `srcset`, das
+  Handy lädt 900 px. Bildausschnitt je Foto getrennt für Handy und Desktop.
+  Auf dem Handy zeigt die Karte nur Titel und Uhrzeit. Kontaktbögen aller 98
+  Fotos in `fotos/auftrag/uebersicht/`, Originale nur in der Sitzung, nicht
+  im Repository. Geprüft: alle fünf Bilder hell und dunkel, Handy und
+  Desktop, keine fehlenden Dateien, keine Skriptfehler. Offen: Ort der
+  Baustelle für die Karte (heute nur Datum und Uhrzeit), ob die Drohne
+  VeSa gehört oder einem Partner (Text «per Drohne» bewusst neutral), und
+  Adrian nimmt die Drive-Freigabe zurück. Desktop: Beim Unterbau-Bild liegt
+  der Monteur unter dem Text, weil das Foto keinen Spielraum nach rechts
+  hat.

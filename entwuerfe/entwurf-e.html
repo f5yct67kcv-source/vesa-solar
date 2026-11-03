@@ -161,7 +161,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .slides{position:absolute;inset:0}
 .slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
 .slide.on{opacity:1}
-.slide img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06);transition:transform 7s linear}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:var(--d,50% 50%);display:block;transform:scale(1.06);transition:transform 7s linear}
 .slide.on img{transform:scale(1)}
 .hero2::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(26,26,26,.92) 0%,rgba(26,26,26,.7) 34%,rgba(26,26,26,0) 62%),linear-gradient(0deg,rgba(26,26,26,.85) 0%,rgba(26,26,26,0) 40%)}
 .h2txt{position:relative;z-index:2;width:100%;padding:0 0 40px}
@@ -174,7 +174,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .trust b{color:#fff;font-weight:600}
 .chip{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.03em;border:1px solid rgba(255,255,255,.3);padding:5px 10px;border-radius:999px;color:#fff}
 .chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;margin-right:7px;animation:blink 1.6s infinite;vertical-align:1px}
-.bars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px;max-width:760px}
+.bars{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px;max-width:820px}
 .bars button{background:none;border:0;color:#999999;font:inherit;font-size:16px;text-align:left;padding:0;cursor:pointer}
 .bars button.on,.bars button:hover{color:#fff}
 .bars i{display:block;height:3px;background:rgba(255,255,255,.25);margin-top:10px;overflow:hidden}
@@ -183,7 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .bars button.on u{animation:fill var(--dur,6s) linear forwards}
 .paused .bars button.on u{animation-play-state:paused}
 @keyframes fill{to{width:100%}}
-.cap{position:absolute;z-index:3;right:0;top:0;background:var(--bg);color:var(--fg);padding:14px 20px 16px;min-width:260px}
+.cap{position:absolute;z-index:3;right:0;top:0;background:var(--bg);color:var(--fg);padding:14px 20px 16px;min-width:260px;max-width:380px}
 .cap b{display:block;font-size:19px;font-weight:600}
 .cap span{color:var(--mute);font-size:15px}
 .hero2 .live{z-index:3;top:auto;bottom:40px;right:32px}
@@ -205,6 +205,8 @@ html[data-hero="1"] .bars{display:none}
  .cap{min-width:0;max-width:72%;padding:10px 16px 12px}
  .cap b{font-size:17px} .cap span{font-size:14px}
  .hero2 .live{display:none}
+ .slide img{object-position:var(--m,50% 50%)}
+ .cap-l{display:none}
 }
 @media (prefers-reduced-motion:reduce){.slide,.slide img{transition:none}.bars button.on u{animation:none;width:100%}}
 </style>
@@ -228,12 +230,13 @@ html[data-hero="1"] .bars{display:none}
 
 <div class="hero2" id="hero">
  <div class="slides" id="slides">
-  <figure class="slide on" data-t="Luzern · Steildach" data-s="189 Module"><img src="../fotos/monteur-dach.webp" alt="Zwei Monteure tragen ein Modul über ein Ziegeldach in Luzern" style="object-position:58% 30%"></figure>
-  <figure class="slide" data-t="Muri AG · Flachdach" data-s="292 Module"><img src="../fotos/muri-halle.webp" alt="Flachdach in Muri mit 292 Modulen von oben" style="object-position:50% 50%"></figure>
-  <figure class="slide" data-t="Spreitenbach · Industrie" data-s="640 Module"><img src="../fotos/keller-spreitenbach.webp" alt="Industriehalle in Spreitenbach mit Solaranlage" style="object-position:50% 45%"></figure>
-  <figure class="slide" data-t="Zürich · Indach" data-s="72 Module"><img src="../fotos/letzigraben.webp" alt="Mehrfamilienhaus in Zürich mit Indach-Anlage" style="object-position:50% 45%"></figure>
+  <figure class="slide on" data-t="Module kommen per Drohne aufs Dach" data-s="18. Juni 2026, 09:52" style="--d:60% 40%;--m:64% 40%"><img src="../fotos/auftrag/drohne-anflug-1600.webp" srcset="../fotos/auftrag/drohne-anflug-900.webp 900w, ../fotos/auftrag/drohne-anflug-1600.webp 1600w, ../fotos/auftrag/drohne-anflug-2400.webp 2400w" sizes="100vw" alt="Ein Solarmodul hängt an der Drohne, das Team nimmt es auf dem Gerüst an"></figure>
+  <figure class="slide" data-t="Oben nimmt das Team sie an" data-s="10:10" style="--d:60% 35%;--m:66% 30%"><img src="../fotos/auftrag/team-geruest-1600.webp" srcset="../fotos/auftrag/team-geruest-900.webp 900w, ../fotos/auftrag/team-geruest-1600.webp 1600w, ../fotos/auftrag/team-geruest-2400.webp 2400w" sizes="100vw" alt="Zwei Monteure mit Helm auf dem Gerüst schauen dem nächsten Modul entgegen" loading="lazy"></figure>
+  <figure class="slide" data-t="Der Pilot fliegt vom Kamin aus" data-s="09:44" style="--d:55% 40%;--m:52% 45%"><img src="../fotos/auftrag/pilot-kamin-1600.webp" srcset="../fotos/auftrag/pilot-kamin-900.webp 900w, ../fotos/auftrag/pilot-kamin-1600.webp 1600w, ../fotos/auftrag/pilot-kamin-2400.webp 2400w" sizes="100vw" alt="Der Drohnenpilot sitzt mit Helm und Fernsteuerung auf dem Kamin" loading="lazy"></figure>
+  <figure class="slide" data-t="Unterbau ab halb acht" data-s="07:33, Haken und Schienen" style="--d:50% 40%;--m:52% 40%"><img src="../fotos/auftrag/unterbau-morgen-1600.webp" srcset="../fotos/auftrag/unterbau-morgen-900.webp 900w, ../fotos/auftrag/unterbau-morgen-1600.webp 1600w, ../fotos/auftrag/unterbau-morgen-2400.webp 2400w" sizes="100vw" alt="Ein Monteur schraubt die Schienen der Unterkonstruktion auf das Ziegeldach" loading="lazy"></figure>
+  <figure class="slide" data-t="Drohne startklar" data-s="09:06, neben der Baustelle" style="--d:62% 50%;--m:74% 50%"><img src="../fotos/auftrag/drohne-startklar-1600.webp" srcset="../fotos/auftrag/drohne-startklar-900.webp 900w, ../fotos/auftrag/drohne-startklar-1600.webp 1600w, ../fotos/auftrag/drohne-startklar-2400.webp 2400w" sizes="100vw" alt="Zwei Männer stehen auf einer Wiese neben der startklaren Transportdrohne" loading="lazy"></figure>
  </div>
- <a class="cap" href="#daecher" id="cap"><b id="cap-t">Luzern · Steildach</b><span><span id="cap-s">189 Module</span> · alle 120 Dächer ansehen →</span></a>
+ <a class="cap" href="#system" id="cap"><b id="cap-t">Module kommen per Drohne aufs Dach</b><span><span id="cap-s">18. Juni 2026, 09:52</span><span class="cap-l"> · so montieren wir →</span></span></a>
  <div class="live" id="live">
    <div class="t"><b>Live · Boniswil</b><span id="lv-time">–</span></div>
    <div class="sun"><svg viewBox="0 0 260 70" id="sunpath"></svg></div>
@@ -252,11 +255,12 @@ html[data-hero="1"] .bars{display:none}
   <p>Kein Verkäufer, der die Montage weitergibt. Sandro und sein Team montieren seit 15 Jahren Solaranlagen, vom Einfamilienhaus bis zur Halle.</p>
   <div class="btns"><a class="btn p" href="#dach">Dein Dach prüfen</a><a class="btn s2" href="#system">Wie wir montieren</a></div>
   <div class="trust"><span><b>15 Jahre</b> auf dem Dach</span><span>Mitglied Swissolar</span><span class="chip" id="lv-chip">Live · Boniswil</span></div>
-  <div class="bars" id="bars" role="tablist" aria-label="Dächer">
-   <button type="button" role="tab" class="on"><span>Steildach</span><i><u></u></i></button>
-   <button type="button" role="tab"><span>Flachdach</span><i><u></u></i></button>
-   <button type="button" role="tab"><span>Industrie</span><i><u></u></i></button>
-   <button type="button" role="tab"><span>Indach</span><i><u></u></i></button>
+  <div class="bars" id="bars" role="tablist" aria-label="Ein Montagetag in Bildern">
+   <button type="button" role="tab" class="on"><span>Drohne</span><i><u></u></i></button>
+   <button type="button" role="tab"><span>Team</span><i><u></u></i></button>
+   <button type="button" role="tab"><span>Pilot</span><i><u></u></i></button>
+   <button type="button" role="tab"><span>Unterbau</span><i><u></u></i></button>
+   <button type="button" role="tab"><span>Start</span><i><u></u></i></button>
   </div>
  </div></div>
 </div>
