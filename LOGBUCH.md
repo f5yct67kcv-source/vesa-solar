@@ -148,9 +148,12 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
 - [ ] **VES-020** · 03.11.2026 · **Adrians Fotos in den Slider**. Weiterhin
   blockiert wie in VES-012: Der Drive-Ordner «VESA Solar» ist privat (Google
   leitet auf die Anmeldung um, um 12:20 erneut geprüft), und der
-  Drive-Zugang dieser Sitzung bricht bei Dateien ab etwa 6 MB ab. Wege:
-  Ordner per Link freigeben, oder 8 bis 12 ausgewählte Fotos direkt im
-  Repository hochladen (GitHub, Ordner `fotos/originale/`, Upload im
-  Browser bis 25 MB pro Datei). Danach Skript laufen lassen, Kontaktbogen
-  zeigen, Adrian wählt die vier bis sechs Slider-Bilder und je Bild Ort,
-  Dachart und Modulzahl. Originale danach wieder aus dem Repository.
+  Drive-Zugang dieser Sitzung bricht bei Dateien ab etwa 6 MB ab.
+  Empfohlener Weg: Ordner vorübergehend per Link freigeben («Jeder mit dem
+  Link», Betrachter), herunterladen, Freigabe zurücknehmen. Originale
+  **nicht** ins Repository hochladen: Es ist öffentlich, die Git-Geschichte
+  behält sie auch nach dem Löschen, und die Kamera-Metadaten können den
+  Standort des Kundenhauses enthalten. Ins Repository kommen nur die vom
+  Skript aufbereiteten WebP ohne Metadaten. Danach Kontaktbogen zeigen,
+  Adrian wählt die vier bis sechs Slider-Bilder und je Bild Ort, Dachart
+  und Modulzahl.
