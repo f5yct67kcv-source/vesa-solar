@@ -151,7 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
  .hero .wrap{grid-template-columns:1fr} .hero .txt{padding:48px 18px 40px} .hero .pic{min-height:520px}
  .live{left:14px;right:14px;top:auto;bottom:14px;width:auto} .tri{display:none}
  .stats .wrap{grid-template-columns:1fr 1fr} .stat{padding:26px 0 22px} .stat+.stat{border-left:0;padding-left:0} .stat:nth-child(even){border-left:1px solid var(--bandline);padding-left:20px} .stat .num{font-size:50px}
- .sd,.ex,.refs,.split,.cta .wrap{grid-template-columns:1fr} .sd .in,.sd .out{padding:24px 18px} .sd .res,.sd .derive{grid-template-columns:1fr 1fr} .compass{right:18px;top:18px;width:64px;height:64px}
+ .sd,.ex,.refs,.split,.cta .wrap{grid-template-columns:1fr} .sd,.split{grid-template-columns:minmax(0,1fr)} .team{gap:12px} .team figure{flex:1;width:auto;min-width:0} .team img{width:100%;height:auto} .sd .in,.sd .out{padding:24px 18px} .sd .res,.sd .derive{grid-template-columns:1fr 1fr} .compass{right:18px;top:18px;width:64px;height:64px}
  .steps{grid-template-columns:1fr 1fr} .cta .box{padding:44px 18px} .cta .box:first-child{border-right:0;border-bottom:1px solid #4d4d4d}
  section{padding:60px 0} .sec-h{flex-direction:column;align-items:flex-start}
 }
@@ -198,7 +198,13 @@ html[data-cap="ohne"] .cap{display:none}
 }
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
 /* Bildfläche auf dem Desktop fest 2:1 (VES-031); alte Fassung bis 820 px Höhe mit ?flaeche=heute */
-@media(min-width:901px){html:not([data-flaeche="heute"]) .hero2{min-height:0;aspect-ratio:2/1}}
+@media(min-width:901px){html:not([data-flaeche="heute"]) .hero2{width:100%;min-height:580px;aspect-ratio:2/1}}
+/* Textblock links in der Bildfläche, leicht über der Mitte (VES-032) */
+@media(min-width:901px){
+ html:not([data-flaeche="heute"]) .hero2{align-items:center}
+ html:not([data-flaeche="heute"]) .h2txt{padding:40px 0 calc(40px + 3%)}
+ html:not([data-flaeche="heute"]) .h2txt .wrap{max-width:none;margin:0;padding:0 0 0 7.5vw}
+}
 </style>
 </head>
 <body>

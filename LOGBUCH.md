@@ -307,3 +307,23 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   den Text. Alle vier Slider-Bilder auf 1440 und 1920 px geprüft, hell und
   dunkel, ohne fehlende Dateien und ohne Skriptfehler
   (`entwuerfe/bilder/flaeche-2zu1-slider-*.jpg`).
+- [x] **VES-032** · 03.11.2026 · **Textblock im Kopf neu gesetzt** (Adrian,
+  Bildschirmfoto vom Mac mit roter Markierung: «der textblock sitzt nicht
+  mehr sauber.. bitte in etwa in meine markierung positionieren»). Seit der
+  festen Fläche 2:1 (VES-031) stand der Text unten, mitten im Motiv. Jetzt
+  steht er auf dem Desktop links (7,5 % der Breite vom Rand, nicht mehr
+  bündig mit dem Logo) und leicht über der Mitte. Auf Adrians Bildschirm
+  (rund 1740 CSS-Pixel breit) gemessen: Block von 17 % bis 77 % der
+  Bildhöhe, die Markierung lag bei 16 % bis 72 %. Damit kleine Laptops
+  genug Platz haben, ist die Bildfläche mindestens 580 px hoch (bei 1024 px
+  Breite also etwas weniger breit als 2:1). Geprüft auf 1024, 1280, 1440,
+  1740, 1920 und 2560 px, ohne Skriptfehler, kein seitliches Scrollen
+  (`entwuerfe/bilder/textblock-links.jpg`, rot = Adrians Markierung).
+- [x] **VES-033** · 03.11.2026 · **Handy: Seite liess sich seitlich
+  schieben**, beim Prüfen zu VES-032 gefunden, bestand schon vorher. Die
+  Seite war auf dem Handy 440 px breit statt 360 bis 430 px: Die vier
+  runden Team-Fotos (je 92 px) passten nicht nebeneinander, und das Raster
+  von «Dein Dach» wurde vom Inhalt breiter gedrückt. Behoben: Team-Fotos
+  teilen sich die Breite (auf 375 px je 76 px), die Raster dürfen schmaler
+  werden als ihr Inhalt. Geprüft auf 360, 375, 390 und 430 px:
+  Seitenbreite gleich Bildschirmbreite.
