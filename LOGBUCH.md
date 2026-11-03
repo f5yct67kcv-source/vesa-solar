@@ -286,7 +286,7 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   zurückholen. Kontaktbogen und Vergleich `karte-duenn-ohne-*.jpg` sind neu.
   Geprüft auf 390 px (lädt 2400 px) und 1920 px Retina (lädt 3840 px),
   ohne fehlende Dateien und ohne Skriptfehler.
-- [ ] **VES-030** · 03.11.2026 · **Variante: Bildfläche fest 2:1 auf dem
+- [x] **VES-030** · 03.11.2026 · **Variante: Bildfläche fest 2:1 auf dem
   Desktop** (Adrian: «zeig mir die Bildfläche fest auf 2:1»; vorher die
   Frage, welches Seitenverhältnis die Bilder brauchen, damit nichts
   zugeschnitten wird). Heute ist die Fläche so breit wie das Fenster und
@@ -297,4 +297,13 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   werden damit auf keinem Desktop beschnitten. Dafür wird der Kopf auf
   breiten Bildschirmen hoch, und die Zahlenleiste rutscht unter den
   Fensterrand. Vergleich `entwuerfe/bilder/flaeche-2zu1-*.jpg`, ohne
-  Skriptfehler. Offen: Adrian wählt heute oder 2:1.
+  Skriptfehler. Entschieden: 2:1 (VES-031).
+- [x] **VES-031** · 03.11.2026 · **Bildfläche fest 2:1** (Adrian: «2:1
+  nehmen», zu VES-030). Auf dem Desktop (ab 901 px) ist die Bildfläche im
+  Kopf jetzt immer 2:1, zum Beispiel 1440×720 und 1920×960. Das Handy bleibt
+  gleich. Die alte Fassung mit höchstens 820 px Höhe ist noch über
+  `?flaeche=heute` zu sehen. Für Fotos heisst das: im Format 2:1 liefern,
+  zum Beispiel 3840 × 1920 px, Motiv in der rechten Hälfte, links Platz für
+  den Text. Alle vier Slider-Bilder auf 1440 und 1920 px geprüft, hell und
+  dunkel, ohne fehlende Dateien und ohne Skriptfehler
+  (`entwuerfe/bilder/flaeche-2zu1-slider-*.jpg`).

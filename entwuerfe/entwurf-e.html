@@ -197,8 +197,8 @@ html[data-cap="ohne"] .cap{display:none}
  .slide img{object-position:var(--m,50% 50%)}
 }
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
-/* Variante: Bildfläche fest 2:1 auf dem Desktop, ?flaeche=2zu1 */
-@media(min-width:901px){html[data-flaeche="2zu1"] .hero2{min-height:0;aspect-ratio:2/1}}
+/* Bildfläche auf dem Desktop fest 2:1 (VES-031); alte Fassung bis 820 px Höhe mit ?flaeche=heute */
+@media(min-width:901px){html:not([data-flaeche="heute"]) .hero2{min-height:0;aspect-ratio:2/1}}
 </style>
 </head>
 <body>
