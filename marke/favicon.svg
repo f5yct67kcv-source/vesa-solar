@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 -30 559 530">
+  <polygon points="319.5,-22 595,466 44,466" fill="#ffffff" stroke="#ffffff" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="319.50,0.00 233.00,149.83 406.00,149.83" fill="#cccccc" stroke="#cccccc" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="233.00,149.83 146.50,299.67 319.50,299.67" fill="#b3b3b3" stroke="#b3b3b3" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="233.00,149.83 406.00,149.83 319.50,299.67" fill="#999999" stroke="#999999" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="406.00,149.83 319.50,299.67 492.50,299.67" fill="#808080" stroke="#808080" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="146.50,299.67 60.00,449.50 233.00,449.50" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="146.50,299.67 319.50,299.67 233.00,449.50" fill="#4d4d4d" stroke="#4d4d4d" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="319.50,299.67 233.00,449.50 406.00,449.50" fill="#999999" stroke="#999999" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="319.50,299.67 492.50,299.67 406.00,449.50" fill="#cccccc" stroke="#cccccc" stroke-width="0.8" stroke-linejoin="round"/>
+  <polygon points="492.50,299.67 406.00,449.50 579.00,449.50" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8" stroke-linejoin="round"/>
+</svg>

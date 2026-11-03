@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../marke/favicon.svg" type="image/svg+xml">
 <title>VeSa Solar · Entwurf E</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Farben nur aus dem Logo: Schwarz, #181818, #484848, #808080, #989898, #b0b0b0, #c8c8c8, Weiss */
-:root{--bg:#ffffff;--bg2:#f2f2f2;--fg:#000000;--fg2:#181818;--mid:#484848;--mute:#808080;--light:#c8c8c8;--line:#dedede;--inv:#ffffff;--band:#000000;--bandfg:#ffffff;--bandmute:#b0b0b0;--bandline:#484848;--logo:none;--tri:#ffffff;--draw:#181818;--drawbg:#ffffff}
-:root[data-theme="dark"]{--bg:#181818;--bg2:#242424;--fg:#ffffff;--fg2:#000000;--mid:#c8c8c8;--mute:#989898;--light:#808080;--line:#3a3a3a;--inv:#000000;--band:#ffffff;--bandfg:#000000;--bandmute:#484848;--bandline:#c8c8c8;--logo:invert(1);--tri:#181818;--draw:#ffffff;--drawbg:#181818}
+/* Farben exakt aus dem Logo: K100 #000000, K90 #1a1a1a, K70 #4d4d4d, K50 #808080, K40 #999999, K30 #b3b3b3, K20 #cccccc, Weiss */
+:root{--bg:#ffffff;--bg2:#f2f2f2;--fg:#000000;--fg2:#1a1a1a;--mid:#4d4d4d;--mute:#808080;--light:#cccccc;--line:#dedede;--inv:#ffffff;--band:#000000;--bandfg:#ffffff;--bandmute:#b3b3b3;--bandline:#4d4d4d;--logo:none;--tri:#ffffff;--draw:#1a1a1a;--drawbg:#ffffff}
+:root[data-theme="dark"]{--bg:#1a1a1a;--bg2:#242424;--fg:#ffffff;--fg2:#000000;--mid:#cccccc;--mute:#999999;--light:#808080;--line:#3a3a3a;--inv:#000000;--band:#ffffff;--bandfg:#000000;--bandmute:#4d4d4d;--bandline:#cccccc;--logo:invert(1);--tri:#1a1a1a;--draw:#ffffff;--drawbg:#1a1a1a}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font:17px/1.55 "Source Sans 3",system-ui,sans-serif;transition:background .3s,color .3s}
@@ -39,15 +40,15 @@ h1{font-size:clamp(46px,5.2vw,76px);max-width:14ch}
 .tri{position:absolute;left:-1px;bottom:-1px;width:200px;height:173px}
 /* Live-Tafel */
 .live{position:absolute;right:20px;top:20px;width:290px;background:rgba(0,0,0,.78);color:#fff;padding:16px 18px;backdrop-filter:blur(4px);font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.5}
-.live .t{display:flex;justify-content:space-between;color:#b0b0b0;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;font-size:11px}
+.live .t{display:flex;justify-content:space-between;color:#b3b3b3;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;font-size:11px}
 .live .t b{color:#fff;font-weight:500}
 .live .t b::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;margin-right:6px;animation:blink 1.6s infinite}
 @keyframes blink{50%{opacity:.2}}
 .live dl{display:grid;grid-template-columns:1fr auto;gap:3px 12px}
-.live dt{color:#989898}.live dd{text-align:right}
-.live .sun{height:70px;margin:10px 0 4px;position:relative;border-bottom:1px solid #484848}
+.live dt{color:#999999}.live dd{text-align:right}
+.live .sun{height:70px;margin:10px 0 4px;position:relative;border-bottom:1px solid #4d4d4d}
 .live .sun svg{width:100%;height:100%;display:block}
-.live .ok{margin-top:10px;padding-top:10px;border-top:1px solid #484848;color:#c8c8c8}
+.live .ok{margin-top:10px;padding-top:10px;border-top:1px solid #4d4d4d;color:#cccccc}
 .stats{background:var(--band);color:var(--bandfg)}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:44px 24px 40px 0}
@@ -93,8 +94,8 @@ h2{font-size:clamp(36px,4vw,58px);max-width:16ch}
 .step img{width:100%;height:100%;object-fit:cover}
 .step div{position:absolute;inset:auto 0 0 0;padding:18px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.85));color:#fff}
 .step b{display:block;font-family:"Source Serif 4";font-weight:600;font-size:26px;line-height:1}
-.step b i{font-style:normal;color:#b0b0b0;margin-right:8px;font-size:18px}
-.step small{color:#c8c8c8}
+.step b i{font-style:normal;color:#b3b3b3;margin-right:8px;font-size:18px}
+.step small{color:#cccccc}
 .refs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .ref{background:var(--bg2)}
 .ref img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
@@ -115,12 +116,12 @@ h2{font-size:clamp(36px,4vw,58px);max-width:16ch}
 .cta{background:var(--fg2);color:#fff}
 .cta .wrap{display:grid;grid-template-columns:1fr 1fr;padding:0}
 .cta .box{padding:72px 48px}
-.cta .box:first-child{border-right:1px solid #484848}
+.cta .box:first-child{border-right:1px solid #4d4d4d}
 .cta h2{color:#fff;font-size:40px}
-.cta p{color:#b0b0b0;margin:14px 0 26px;max-width:40ch}
+.cta p{color:#b3b3b3;margin:14px 0 26px;max-width:40ch}
 .cta .btn{border-color:#fff;color:#fff}
 .cta .btn.p{background:#fff;color:#000}
-.cta ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;color:#989898;font-size:15px;margin-top:22px}
+.cta ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;color:#999999;font-size:15px;margin-top:22px}
 .cta ul b{color:#fff;font-weight:600}
 footer{padding:32px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -130,14 +131,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
  .live{left:14px;right:14px;top:auto;bottom:14px;width:auto} .tri{display:none}
  .stats .wrap{grid-template-columns:1fr 1fr} .stat{padding:26px 0 22px} .stat+.stat{border-left:0;padding-left:0} .stat:nth-child(even){border-left:1px solid var(--bandline);padding-left:20px} .stat .num{font-size:50px}
  .sd,.ex,.refs,.split,.cta .wrap{grid-template-columns:1fr} .sd .in,.sd .out{padding:24px 18px} .sd .res,.sd .derive{grid-template-columns:1fr 1fr} .compass{right:18px;top:18px;width:64px;height:64px}
- .steps{grid-template-columns:1fr 1fr} .cta .box{padding:44px 18px} .cta .box:first-child{border-right:0;border-bottom:1px solid #484848}
+ .steps{grid-template-columns:1fr 1fr} .cta .box{padding:44px 18px} .cta .box:first-child{border-right:0;border-bottom:1px solid #4d4d4d}
  section{padding:60px 0} .sec-h{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 <header><div class="wrap">
- <a class="logo" href="#"><img src="../fotos/logo.png" alt="VeSa Solar GmbH"></a>
+ <a class="logo" href="#"><img src="../marke/vesa-logo.svg" alt="VeSa Solar GmbH"></a>
  <nav><a href="#dach">Dein Dach</a><a href="#system">Montagesystem</a><a href="#daecher">Dächer</a><a href="#team">Team</a><button class="sw" id="sw" type="button" aria-label="Hell oder dunkel"><span>Hell / Dunkel</span><i></i></button><a class="cta" href="#">062 777 28 48</a></nav>
 </div></header>
 
@@ -164,14 +165,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   </div>
   <svg class="tri" viewBox="0 0 220 190" aria-hidden="true">
    <polygon points="0,190 110,0 220,190" fill="var(--tri)"/>
-   <polygon points="110,0 55,95 165,95" fill="#c8c8c8"/><polygon points="55,95 82.5,142.5 137.5,142.5" fill="#989898"/><polygon points="55,95 27.5,142.5 82.5,142.5" fill="#b0b0b0"/><polygon points="165,95 137.5,142.5 192.5,142.5" fill="#808080"/><polygon points="0,190 27.5,142.5 55,190" fill="#181818"/><polygon points="27.5,142.5 55,190 82.5,142.5" fill="#484848"/><polygon points="82.5,142.5 55,190 110,190" fill="#989898"/><polygon points="82.5,142.5 110,190 137.5,142.5" fill="#808080"/><polygon points="137.5,142.5 110,190 165,190" fill="#c8c8c8"/><polygon points="137.5,142.5 165,190 192.5,142.5" fill="#b0b0b0"/><polygon points="192.5,142.5 165,190 220,190" fill="#181818"/>
+   <polygon points="110,0 55,95 165,95" fill="#cccccc"/><polygon points="55,95 82.5,142.5 137.5,142.5" fill="#999999"/><polygon points="55,95 27.5,142.5 82.5,142.5" fill="#b3b3b3"/><polygon points="165,95 137.5,142.5 192.5,142.5" fill="#808080"/><polygon points="0,190 27.5,142.5 55,190" fill="#1a1a1a"/><polygon points="27.5,142.5 55,190 82.5,142.5" fill="#4d4d4d"/><polygon points="82.5,142.5 55,190 110,190" fill="#999999"/><polygon points="82.5,142.5 110,190 137.5,142.5" fill="#808080"/><polygon points="137.5,142.5 110,190 165,190" fill="#cccccc"/><polygon points="137.5,142.5 165,190 192.5,142.5" fill="#b3b3b3"/><polygon points="192.5,142.5 165,190 220,190" fill="#1a1a1a"/>
   </svg>
  </div>
 </div></div>
 
 <div class="stats"><div class="wrap">
  <div class="stat"><div class="num">4'800<small>+</small></div><span>Module montiert</span></div>
- <div class="stat"><div class="num" id="kw-now">–<small>kW</small></div><span>produzieren unsere Anlagen jetzt, geschätzt aus dem Sonnenstand</span></div>
+ <div class="stat"><div class="num" id="kw-now">–<small>kW</small></div><span id="kw-lab">produzieren unsere Anlagen jetzt, geschätzt aus dem Sonnenstand</span></div>
  <div class="stat"><div class="num">120</div><span>Dächer, vom Einfamilienhaus bis zur Halle</span></div>
  <div class="stat"><div class="num">15</div><span>Jahre auf dem Dach</span></div>
 </div></div>
@@ -286,8 +287,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </div></section>
 
 <div class="cta"><div class="wrap">
- <div class="box"><div class="kicker" style="color:#989898">Für Hausbesitzer</div><h2>Schick uns ein Foto von deinem Dach. Sandro schaut es an.</h2><p>Oder nimm die Zahlen von oben mit: Wir sagen dir, was wirklich draufpasst und was die Montage kostet.</p><div class="btns"><a class="btn p" href="#dach">Dach prüfen</a><a class="btn" href="#">062 777 28 48</a></div></div>
- <div class="box"><div class="kicker" style="color:#989898">Für Solarteure, Elektriker, Dachdecker</div><h2>Montagekapazität mit Erfahrung.</h2><p>Du verkaufst und planst, wir montieren. Eigenes Sicherheitskonzept, Gerüst und Helikopter über Partner.</p><a class="btn" href="#">Montagepartner werden</a><ul><li><b>scaffs</b> Gerüst</li><li><b>Brechbühl</b> Holzbau</li><li><b>del Sole</b> Elektro</li><li><b>Swiss Helicopter</b></li><li><b>9.81</b> Sicherheit</li><li><b>Swissolar</b> Mitglied</li></ul></div>
+ <div class="box"><div class="kicker" style="color:#999999">Für Hausbesitzer</div><h2>Schick uns ein Foto von deinem Dach. Sandro schaut es an.</h2><p>Oder nimm die Zahlen von oben mit: Wir sagen dir, was wirklich draufpasst und was die Montage kostet.</p><div class="btns"><a class="btn p" href="#dach">Dach prüfen</a><a class="btn" href="#">062 777 28 48</a></div></div>
+ <div class="box"><div class="kicker" style="color:#999999">Für Solarteure, Elektriker, Dachdecker</div><h2>Montagekapazität mit Erfahrung.</h2><p>Du verkaufst und planst, wir montieren. Eigenes Sicherheitskonzept, Gerüst und Helikopter über Partner.</p><a class="btn" href="#">Montagepartner werden</a><ul><li><b>scaffs</b> Gerüst</li><li><b>Brechbühl</b> Holzbau</li><li><b>del Sole</b> Elektro</li><li><b>Swiss Helicopter</b></li><li><b>9.81</b> Sicherheit</li><li><b>Swissolar</b> Mitglied</li></ul></div>
 </div></div>
 <footer><div class="wrap"><span>VeSa Solar GmbH · Rütiweg 6 · 5706 Boniswil · info@vesa-solar.ch</span><span>Instagram · Facebook · Impressum</span></div></footer>
 
@@ -303,7 +304,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 /* ---------- Sonnenstand (NOAA, vereinfacht) für Boniswil ---------- */
 const LAT=47.3167, LON=8.1883, KWP_TOTAL=2160; // 4'800 Module × 0.45 kW
 function sunPos(d){
- const rad=Math.PI/180, J=d/864e5-0.5+2440587.5, n=J-2451545;
+ const rad=Math.PI/180, J=d/864e5+2440587.5, n=J-2451545;
  const L=(280.46+0.9856474*n)%360, g=(357.528+0.9856003*n)%360*rad;
  const lam=(L+1.915*Math.sin(g)+0.02*Math.sin(2*g))*rad, eps=23.439*rad;
  const ra=Math.atan2(Math.cos(eps)*Math.sin(lam),Math.cos(lam)), dec=Math.asin(Math.sin(eps)*Math.sin(lam));
@@ -312,11 +313,12 @@ function sunPos(d){
  let az=Math.atan2(-Math.sin(ha),Math.cos(LAT*rad)*Math.tan(dec)-Math.sin(LAT*rad)*Math.cos(ha));
  return {el:el/rad, az:((az/rad)+360)%360};
 }
+function zhMidnight(d){const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Zurich',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(d);const g=t=>+p.find(x=>x.type===t).value;return new Date(d.getTime()-((g('hour')*60+g('minute'))*60+g('second'))*1000-d.getMilliseconds());}
 function fmtT(d){return d.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Zurich'})}
 function dayCurve(now){
- const day0=new Date(now); day0.setHours(0,0,0,0);
+ const day0=zhMidnight(now);
  let pts=[],rise=null,set=null,prev=-90;
- for(let m=0;m<=1440;m+=10){const t=new Date(day0.getTime()+m*6e4);const e=sunPos(t).el;pts.push([m,e]);if(prev<=-0.83&&e>-0.83)rise=t;if(prev>-0.83&&e<=-0.83)set=t;prev=e;}
+ for(let m=0;m<=1440;m+=2){const t=new Date(day0.getTime()+m*6e4);const e=sunPos(t).el;pts.push([m,e]);if(prev<=-0.83&&e>-0.83)rise=t;if(prev>-0.83&&e<=-0.83)set=t;prev=e;}
  return {pts,rise,set};
 }
 function tick(){
@@ -327,10 +329,13 @@ function tick(){
  document.getElementById('lv-rs').textContent=(c.rise?fmtT(c.rise):'–')+' / '+(c.set?fmtT(c.set):'–');
  const maxEl=Math.max(...c.pts.map(p=>p[1]));
  const path=c.pts.map((p,i)=>(i?'L':'M')+(p[0]/1440*260).toFixed(1)+' '+(62-Math.max(p[1],-8)/Math.max(maxEl,10)*54).toFixed(1)).join(' ');
- const nx=((now-new Date(now).setHours(0,0,0,0))/864e5*260), ny=62-Math.max(s.el,-8)/Math.max(maxEl,10)*54;
- document.getElementById('sunpath').innerHTML=`<path d="${path}" stroke="#808080" fill="none" stroke-width="1.2"/><line x1="0" y1="62" x2="260" y2="62" stroke="#484848"/><line x1="${nx}" y1="0" x2="${nx}" y2="62" stroke="#484848" stroke-dasharray="2 3"/><circle cx="${nx}" cy="${ny}" r="4" fill="#fff"/>`;
- const kw=Math.max(0,Math.sin(s.el*Math.PI/180))*KWP_TOTAL*0.78*(window._cloudF||1);
- document.getElementById('kw-now').innerHTML=Math.round(kw).toLocaleString('de-CH').replace(/,/g,"'")+'<small>kW</small>';
+ const nx=((now-zhMidnight(now))/864e5*260), ny=62-Math.max(s.el,-8)/Math.max(maxEl,10)*54;
+ document.getElementById('sunpath').innerHTML=`<path d="${path}" stroke="#808080" fill="none" stroke-width="1.2"/><line x1="0" y1="62" x2="260" y2="62" stroke="#4d4d4d"/><line x1="${nx}" y1="0" x2="${nx}" y2="62" stroke="#4d4d4d" stroke-dasharray="2 3"/><circle cx="${nx}" cy="${ny}" r="4" fill="#fff"/>`;
+ const f=el=>Math.max(0,Math.sin(el*Math.PI/180))*KWP_TOTAL*0.78;
+ let kw=f(s.el)*(window._cloudF||1), lab='produzieren unsere Anlagen jetzt, geschätzt aus dem Sonnenstand';
+ if(s.el<=0){kw=f(maxEl);lab='produzierten unsere Anlagen heute Mittag, geschätzt aus dem Sonnenstand';}
+ document.getElementById('kw-now').innerHTML=Math.round(kw).toLocaleString('de-CH').replace(/[,’]/g,"'")+'<small>kW</small>';
+ document.getElementById('kw-lab').textContent=lab;
 }
 function azWord(a){return ['N','NO','O','SO','S','SW','W','NW'][Math.round(a/45)%8]}
 tick(); setInterval(tick,60000);

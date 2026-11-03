@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../marke/favicon.svg" type="image/svg+xml">
 <title>VeSa Solar · Entwurf D hell</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* Farben aus dem Logo: Schwarz, #181818, #484848, #808080, #989898, #b0b0b0, #c8c8c8, Weiss */
-:root{--bg:#ffffff;--bg2:#f2f2f2;--fg:#000000;--fg2:#181818;--mid:#484848;--mute:#808080;--light:#c8c8c8;--line:#dedede;--inv:#ffffff}
+/* Farben exakt aus dem Logo: K100 #000000, K90 #1a1a1a, K70 #4d4d4d, K50 #808080, K40 #999999, K30 #b3b3b3, K20 #cccccc, Weiss */
+:root{--bg:#ffffff;--bg2:#f2f2f2;--fg:#000000;--fg2:#1a1a1a;--mid:#4d4d4d;--mute:#808080;--light:#cccccc;--line:#dedede;--inv:#ffffff}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--fg);font:17px/1.55 "Source Sans 3",system-ui,sans-serif}
 a{color:inherit;text-decoration:none}
@@ -33,10 +34,10 @@ h1{font-size:clamp(46px,5.2vw,76px);max-width:14ch}
 .stats{background:var(--fg);color:var(--inv)}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:44px 24px 40px 0}
-.stat+.stat{border-left:1px solid #484848;padding-left:28px}
+.stat+.stat{border-left:1px solid #4d4d4d;padding-left:28px}
 .stat .num{font-size:76px;line-height:1;font-weight:500}
 .stat .num small{font-size:30px;margin-left:4px;color:var(--light)}
-.stat span{display:block;color:#b0b0b0;margin-top:10px;font-size:16px}
+.stat span{display:block;color:#b3b3b3;margin-top:10px;font-size:16px}
 section{padding:96px 0}
 .sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:44px}
 h2{font-size:clamp(36px,4vw,58px);max-width:16ch}
@@ -47,7 +48,7 @@ h2{font-size:clamp(36px,4vw,58px);max-width:16ch}
 .step div{position:absolute;inset:auto 0 0 0;padding:18px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.85));color:#fff}
 .step b{display:block;font-family:"Source Serif 4";font-weight:600;font-size:26px;line-height:1}
 .step b i{font-style:normal;color:var(--light);margin-right:8px;font-size:18px}
-.step small{color:#c8c8c8}
+.step small{color:#cccccc}
 .refs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .ref{background:var(--bg2)}
 .ref img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
@@ -67,27 +68,27 @@ h2{font-size:clamp(36px,4vw,58px);max-width:16ch}
 .cta{background:var(--fg2);color:var(--inv)}
 .cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:0}
 .cta .box{padding:72px 48px}
-.cta .box:first-child{border-right:1px solid #484848}
+.cta .box:first-child{border-right:1px solid #4d4d4d}
 .cta h2{color:#fff;font-size:40px}
-.cta p{color:#b0b0b0;margin:14px 0 26px;max-width:40ch}
+.cta p{color:#b3b3b3;margin:14px 0 26px;max-width:40ch}
 .cta .btn{border-color:#fff;color:#fff}
 .cta .btn.p{background:#fff;color:#000}
-.cta ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;color:#989898;font-size:15px;margin-top:22px}
+.cta ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;color:#999999;font-size:15px;margin-top:22px}
 .cta ul b{color:#fff;font-weight:600}
 footer{padding:32px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:900px){
  .wrap{padding:0 18px} nav a:not(.cta){display:none} header .wrap{height:80px} .logo img{height:58px}
  .hero .wrap{grid-template-columns:1fr} .hero .txt{padding:48px 18px 40px} .hero .pic{min-height:380px}
- .stats .wrap{grid-template-columns:1fr 1fr} .stat{padding:26px 0 22px} .stat+.stat{border-left:0;padding-left:0} .stat:nth-child(even){border-left:1px solid #484848;padding-left:20px} .stat .num{font-size:52px}
- .steps{grid-template-columns:1fr 1fr} .refs,.split,.cta .wrap{grid-template-columns:1fr} .cta .box{padding:44px 18px} .cta .box:first-child{border-right:0;border-bottom:1px solid #484848}
+ .stats .wrap{grid-template-columns:1fr 1fr} .stat{padding:26px 0 22px} .stat+.stat{border-left:0;padding-left:0} .stat:nth-child(even){border-left:1px solid #4d4d4d;padding-left:20px} .stat .num{font-size:52px}
+ .steps{grid-template-columns:1fr 1fr} .refs,.split,.cta .wrap{grid-template-columns:1fr} .cta .box{padding:44px 18px} .cta .box:first-child{border-right:0;border-bottom:1px solid #4d4d4d}
  section{padding:60px 0} .sec-h{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 <header><div class="wrap">
- <a class="logo" href="#"><img src="../fotos/logo.png" alt="VeSa Solar GmbH"></a>
+ <a class="logo" href="#"><img src="../marke/vesa-logo.svg" alt="VeSa Solar GmbH"></a>
  <nav><a href="#">Montage</a><a href="#">Dächer</a><a href="#">Für Partner</a><a href="#">Dachreinigung</a><a href="#">Team</a><a class="cta" href="#">062 777 28 48</a></nav>
 </div></header>
 
@@ -102,17 +103,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <img src="../fotos/monteur-dach.webp" alt="">
   <svg class="tri" viewBox="0 0 220 190" aria-hidden="true">
    <polygon points="0,190 110,0 220,190" fill="#ffffff"/>
-   <polygon points="110,0 55,95 165,95" fill="#c8c8c8"/>
-   <polygon points="55,95 82.5,142.5 137.5,142.5" fill="#989898"/>
-   <polygon points="55,95 27.5,142.5 82.5,142.5" fill="#b0b0b0"/>
+   <polygon points="110,0 55,95 165,95" fill="#cccccc"/>
+   <polygon points="55,95 82.5,142.5 137.5,142.5" fill="#999999"/>
+   <polygon points="55,95 27.5,142.5 82.5,142.5" fill="#b3b3b3"/>
    <polygon points="165,95 137.5,142.5 192.5,142.5" fill="#808080"/>
-   <polygon points="0,190 27.5,142.5 55,190" fill="#181818"/>
-   <polygon points="27.5,142.5 55,190 82.5,142.5" fill="#484848"/>
-   <polygon points="82.5,142.5 55,190 110,190" fill="#989898"/>
+   <polygon points="0,190 27.5,142.5 55,190" fill="#1a1a1a"/>
+   <polygon points="27.5,142.5 55,190 82.5,142.5" fill="#4d4d4d"/>
+   <polygon points="82.5,142.5 55,190 110,190" fill="#999999"/>
    <polygon points="82.5,142.5 110,190 137.5,142.5" fill="#808080"/>
-   <polygon points="137.5,142.5 110,190 165,190" fill="#c8c8c8"/>
-   <polygon points="137.5,142.5 165,190 192.5,142.5" fill="#b0b0b0"/>
-   <polygon points="192.5,142.5 165,190 220,190" fill="#181818"/>
+   <polygon points="137.5,142.5 110,190 165,190" fill="#cccccc"/>
+   <polygon points="137.5,142.5 165,190 192.5,142.5" fill="#b3b3b3"/>
+   <polygon points="192.5,142.5 165,190 220,190" fill="#1a1a1a"/>
   </svg>
  </div>
 </div></div>
@@ -162,8 +163,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </div></section>
 
 <div class="cta"><div class="wrap">
- <div class="box"><div class="kicker" style="color:#989898">Für Hausbesitzer</div><h2>Schick uns ein Foto von deinem Dach. Sandro schaut es an.</h2><p>Oder gib die Adresse ein: Wir prüfen dein Dach auf Sonnendach des Bundes und sagen dir, was drauf passt und was die Montage kostet.</p><div class="btns"><a class="btn p" href="#">Dach anschauen lassen</a><a class="btn" href="#">062 777 28 48</a></div></div>
- <div class="box"><div class="kicker" style="color:#989898">Für Solarteure, Elektriker, Dachdecker</div><h2>Montagekapazität mit Erfahrung.</h2><p>Du verkaufst und planst, wir montieren. Eigenes Sicherheitskonzept, Gerüst und Helikopter über Partner.</p><a class="btn" href="#">Montagepartner werden</a><ul><li><b>scaffs</b> Gerüst</li><li><b>Brechbühl</b> Holzbau</li><li><b>del Sole</b> Elektro</li><li><b>Swiss Helicopter</b></li><li><b>9.81</b> Sicherheit</li><li><b>Swissolar</b> Mitglied</li></ul></div>
+ <div class="box"><div class="kicker" style="color:#999999">Für Hausbesitzer</div><h2>Schick uns ein Foto von deinem Dach. Sandro schaut es an.</h2><p>Oder gib die Adresse ein: Wir prüfen dein Dach auf Sonnendach des Bundes und sagen dir, was drauf passt und was die Montage kostet.</p><div class="btns"><a class="btn p" href="#">Dach anschauen lassen</a><a class="btn" href="#">062 777 28 48</a></div></div>
+ <div class="box"><div class="kicker" style="color:#999999">Für Solarteure, Elektriker, Dachdecker</div><h2>Montagekapazität mit Erfahrung.</h2><p>Du verkaufst und planst, wir montieren. Eigenes Sicherheitskonzept, Gerüst und Helikopter über Partner.</p><a class="btn" href="#">Montagepartner werden</a><ul><li><b>scaffs</b> Gerüst</li><li><b>Brechbühl</b> Holzbau</li><li><b>del Sole</b> Elektro</li><li><b>Swiss Helicopter</b></li><li><b>9.81</b> Sicherheit</li><li><b>Swissolar</b> Mitglied</li></ul></div>
 </div></div>
 <footer><div class="wrap"><span>VeSa Solar GmbH · Rütiweg 6 · 5706 Boniswil · info@vesa-solar.ch</span><span>Instagram · Facebook · Impressum</span></div></footer>
 </body></html>
