@@ -266,3 +266,10 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Kamin, Unterbau, Drohne startklar. Wechsel im Browser geprüft, keine
   Skriptfehler, keine fehlenden Dateien. Die Wahl 112 oder 113 für das
   erste Bild bleibt offen (VES-026).
+- [x] **VES-028** · 03.11.2026 · **Vergleich «dünn / ohne» mit dem aktuellen
+  Bild** (Adrian, Bildschirmfoto von `karte-duenn-ohne-desktop.jpg`: «dieses
+  Bild mit dem aktuell ersetzen»). Die Renderings aus VES-022 zeigten noch
+  das alte erste Bild und das Team-Foto. Neu gerendert mit dem heutigen
+  Slider (erstes Bild 112, vier Bilder nach VES-027): Desktop 1440 px und
+  Handy 375/390 px, hell und dunkel, ohne Skriptfehler. Die Wahl dünn oder
+  ohne bleibt offen (VES-022).
