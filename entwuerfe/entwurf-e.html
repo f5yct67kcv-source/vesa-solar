@@ -197,6 +197,8 @@ html[data-cap="ohne"] .cap{display:none}
  .slide img{object-position:var(--m,50% 50%)}
 }
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+/* Variante: Bildfläche fest 2:1 auf dem Desktop, ?flaeche=2zu1 */
+@media(min-width:901px){html[data-flaeche="2zu1"] .hero2{min-height:0;aspect-ratio:2/1}}
 </style>
 </head>
 <body>
@@ -481,7 +483,7 @@ sonnendach($('sdq').value);
 <script>
 /* ---------- Kopf: Foto (1) oder Slider (2) ---------- */
 (function(){
- const q=new URLSearchParams(location.search), mode=q.get('hero')||'2', r=document.documentElement; r.dataset.hero=mode; if(q.get('cap')) r.dataset.cap=q.get('cap');
+ const q=new URLSearchParams(location.search), mode=q.get('hero')||'2', r=document.documentElement; r.dataset.hero=mode; if(q.get('cap')) r.dataset.cap=q.get('cap'); if(q.get('flaeche')) r.dataset.flaeche=q.get('flaeche');
  const hero=document.getElementById('hero'), slides=[...document.querySelectorAll('.slide')], bars=[...document.querySelectorAll('#bars button')];
  const capT=document.getElementById('cap-t'), capS=document.getElementById('cap-s');
  const DUR=6000; let i=0, tm=null;

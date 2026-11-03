@@ -286,3 +286,15 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   zurückholen. Kontaktbogen und Vergleich `karte-duenn-ohne-*.jpg` sind neu.
   Geprüft auf 390 px (lädt 2400 px) und 1920 px Retina (lädt 3840 px),
   ohne fehlende Dateien und ohne Skriptfehler.
+- [ ] **VES-030** · 03.11.2026 · **Variante: Bildfläche fest 2:1 auf dem
+  Desktop** (Adrian: «zeig mir die Bildfläche fest auf 2:1»; vorher die
+  Frage, welches Seitenverhältnis die Bilder brauchen, damit nichts
+  zugeschnitten wird). Heute ist die Fläche so breit wie das Fenster und
+  höchstens 820 px hoch, darum 1,8:1 bis 3,1:1 je nach Bildschirm. Die
+  Variante `?flaeche=2zu1` stellt sie ab 901 px Breite fest auf 2:1, das
+  Handy bleibt gleich. Gemessen: 1280×720 Fläche 1280×640, 1440×900
+  1440×720, 1920×1080 1920×960, 2560×1440 2560×1280. Bilder im Format 2:1
+  werden damit auf keinem Desktop beschnitten. Dafür wird der Kopf auf
+  breiten Bildschirmen hoch, und die Zahlenleiste rutscht unter den
+  Fensterrand. Vergleich `entwuerfe/bilder/flaeche-2zu1-*.jpg`, ohne
+  Skriptfehler. Offen: Adrian wählt heute oder 2:1.
