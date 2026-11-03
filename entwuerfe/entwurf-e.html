@@ -161,8 +161,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .slides{position:absolute;inset:0}
 .slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
 .slide.on{opacity:1}
-.slide img{width:100%;height:100%;object-fit:cover;object-position:var(--d,50% 50%);display:block;transform:scale(1.06);transition:transform 7s linear}
-.slide.on img{transform:scale(1)}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:var(--d,50% 50%);display:block}
 .hero2::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(26,26,26,.92) 0%,rgba(26,26,26,.7) 34%,rgba(26,26,26,0) 62%),linear-gradient(0deg,rgba(26,26,26,.85) 0%,rgba(26,26,26,0) 40%)}
 .h2txt{position:relative;z-index:2;width:100%;padding:0 0 40px}
 .h2txt .kicker{color:#b3b3b3}
@@ -197,7 +196,7 @@ html[data-cap="ohne"] .cap{display:none}
  .hero2 .live{display:none}
  .slide img{object-position:var(--m,50% 50%)}
 }
-@media (prefers-reduced-motion:reduce){.slide,.slide img{transition:none}}
+@media (prefers-reduced-motion:reduce){.slide{transition:none}}
 </style>
 </head>
 <body>
@@ -219,11 +218,11 @@ html[data-cap="ohne"] .cap{display:none}
 
 <div class="hero2" id="hero">
  <div class="slides" id="slides">
-  <figure class="slide on" data-t="Module kommen per Drohne aufs Dach" data-s="10:10" style="--d:50% 18%;--m:52% 20%"><img src="../fotos/auftrag/modul-annahme-1600.webp" srcset="../fotos/auftrag/modul-annahme-900.webp 900w, ../fotos/auftrag/modul-annahme-1600.webp 1600w, ../fotos/auftrag/modul-annahme-2400.webp 2400w" sizes="100vw" alt="Ein Solarmodul schwebt an der Drohne heran, drei Monteure auf dem Gerüst strecken die Hände danach"></figure>
-  <figure class="slide" data-t="Oben nimmt das Team sie an" data-s="10:10" style="--d:60% 35%;--m:66% 30%"><img src="../fotos/auftrag/team-geruest-1600.webp" srcset="../fotos/auftrag/team-geruest-900.webp 900w, ../fotos/auftrag/team-geruest-1600.webp 1600w, ../fotos/auftrag/team-geruest-2400.webp 2400w" sizes="100vw" alt="Zwei Monteure mit Helm auf dem Gerüst schauen dem nächsten Modul entgegen" loading="lazy"></figure>
-  <figure class="slide" data-t="Der Pilot fliegt vom Kamin aus" data-s="09:44" style="--d:55% 40%;--m:52% 45%"><img src="../fotos/auftrag/pilot-kamin-1600.webp" srcset="../fotos/auftrag/pilot-kamin-900.webp 900w, ../fotos/auftrag/pilot-kamin-1600.webp 1600w, ../fotos/auftrag/pilot-kamin-2400.webp 2400w" sizes="100vw" alt="Der Drohnenpilot sitzt mit Helm und Fernsteuerung auf dem Kamin" loading="lazy"></figure>
-  <figure class="slide" data-t="Unterbau ab halb acht" data-s="07:33" style="--d:50% 40%;--m:52% 40%"><img src="../fotos/auftrag/unterbau-morgen-1600.webp" srcset="../fotos/auftrag/unterbau-morgen-900.webp 900w, ../fotos/auftrag/unterbau-morgen-1600.webp 1600w, ../fotos/auftrag/unterbau-morgen-2400.webp 2400w" sizes="100vw" alt="Ein Monteur schraubt die Schienen der Unterkonstruktion auf das Ziegeldach" loading="lazy"></figure>
-  <figure class="slide" data-t="Drohne startklar" data-s="09:06" style="--d:62% 50%;--m:74% 50%"><img src="../fotos/auftrag/drohne-startklar-1600.webp" srcset="../fotos/auftrag/drohne-startklar-900.webp 900w, ../fotos/auftrag/drohne-startklar-1600.webp 1600w, ../fotos/auftrag/drohne-startklar-2400.webp 2400w" sizes="100vw" alt="Zwei Männer stehen auf einer Wiese neben der startklaren Transportdrohne" loading="lazy"></figure>
+  <figure class="slide on" data-t="Module kommen per Drohne aufs Dach" data-s="10:10" style="--d:50% 18%;--m:52% 20%"><img src="../fotos/auftrag/modul-annahme-1600.webp" srcset="../fotos/auftrag/modul-annahme-900.webp 900w, ../fotos/auftrag/modul-annahme-1600.webp 1600w, ../fotos/auftrag/modul-annahme-2400.webp 2400w, ../fotos/auftrag/modul-annahme-3200.webp 3200w" sizes="(max-width: 900px) 760px, 100vw" alt="Ein Solarmodul schwebt an der Drohne heran, drei Monteure auf dem Gerüst strecken die Hände danach"></figure>
+  <figure class="slide" data-t="Oben nimmt das Team sie an" data-s="10:10" style="--d:60% 35%;--m:66% 30%"><img src="../fotos/auftrag/team-geruest-1600.webp" srcset="../fotos/auftrag/team-geruest-900.webp 900w, ../fotos/auftrag/team-geruest-1600.webp 1600w, ../fotos/auftrag/team-geruest-2400.webp 2400w, ../fotos/auftrag/team-geruest-3200.webp 3200w" sizes="(max-width: 900px) 760px, 100vw" alt="Zwei Monteure mit Helm auf dem Gerüst schauen dem nächsten Modul entgegen" loading="lazy"></figure>
+  <figure class="slide" data-t="Der Pilot fliegt vom Kamin aus" data-s="09:44" style="--d:55% 40%;--m:52% 45%"><img src="../fotos/auftrag/pilot-kamin-1600.webp" srcset="../fotos/auftrag/pilot-kamin-900.webp 900w, ../fotos/auftrag/pilot-kamin-1600.webp 1600w, ../fotos/auftrag/pilot-kamin-2400.webp 2400w, ../fotos/auftrag/pilot-kamin-3200.webp 3200w" sizes="(max-width: 900px) 760px, 100vw" alt="Der Drohnenpilot sitzt mit Helm und Fernsteuerung auf dem Kamin" loading="lazy"></figure>
+  <figure class="slide" data-t="Unterbau ab halb acht" data-s="07:33" style="--d:50% 40%;--m:52% 40%"><img src="../fotos/auftrag/unterbau-morgen-1600.webp" srcset="../fotos/auftrag/unterbau-morgen-900.webp 900w, ../fotos/auftrag/unterbau-morgen-1600.webp 1600w, ../fotos/auftrag/unterbau-morgen-2400.webp 2400w, ../fotos/auftrag/unterbau-morgen-3200.webp 3200w" sizes="(max-width: 900px) 760px, 100vw" alt="Ein Monteur schraubt die Schienen der Unterkonstruktion auf das Ziegeldach" loading="lazy"></figure>
+  <figure class="slide" data-t="Drohne startklar" data-s="09:06" style="--d:62% 50%;--m:74% 50%"><img src="../fotos/auftrag/drohne-startklar-1600.webp" srcset="../fotos/auftrag/drohne-startklar-900.webp 900w, ../fotos/auftrag/drohne-startklar-1600.webp 1600w, ../fotos/auftrag/drohne-startklar-2400.webp 2400w, ../fotos/auftrag/drohne-startklar-3200.webp 3200w" sizes="(max-width: 900px) 760px, 100vw" alt="Zwei Männer stehen auf einer Wiese neben der startklaren Transportdrohne" loading="lazy"></figure>
  </div>
  <a class="cap" href="#system" id="cap"><span id="cap-s">10:10</span><b id="cap-t">Module kommen per Drohne aufs Dach</b><span class="cap-l">→</span></a>
  <div class="live" id="live">

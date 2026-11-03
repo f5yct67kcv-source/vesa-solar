@@ -222,3 +222,21 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   keine fehlenden Dateien, keine Skriptfehler. Annahme: «das andere» meint
   das erste Bild mit demselben Motiv; falls das Team-Bild gemeint war, ist
   der Tausch ein Schritt.
+- [x] **VES-025** · 03.11.2026 · **Slider-Fotos waren auf dem Handy
+  unscharf** (Adrian: «Warum ist deine Foto unscharf?!»). Ursache gemessen,
+  nicht das Foto, sondern die Seite: (1) `sizes="100vw"` war falsch, weil
+  das Bild den Kopf mit `object-fit: cover` füllt und auf dem Handy rund
+  634 statt 390 CSS-Pixel breit angezeigt wird. Ein Handy mit 2-facher
+  Auflösung lud darum 900 px für nötige 1266 px (1,4-fach hochgerechnet),
+  ein iPhone 1600 px für 1899 px (1,2-fach). (2) Die grösste Fassung mit
+  2400 px reichte für Retina-Desktops nicht (nötig 2880 px). (3) Das
+  langsame Heranzoomen lief die ganzen 6 s, Safari zeigt Bilder während
+  einer solchen Bewegung weicher. Behoben: `sizes="(max-width: 900px)
+  760px, 100vw"`, zusätzliche Fassung 3200 px, WebP-Qualität 82 statt 78
+  (`werkzeuge/fotos-aufbereiten.py`), Zoom entfernt, Überblenden bleibt.
+  Jetzt lädt das iPhone 2400 px für 1902 px, das Handy 2x 1600 px für
+  1268 px, der Retina-Desktop 3200 px für 2880 px, nirgends wird
+  hochgerechnet. Vergleich am selben Ausschnitt: Kantenschärfe +44 %
+  (`entwuerfe/bilder/schaerfe-vergleich.jpg`). Fünf Slider-Bilder neu
+  aufbereitet, zusammen 4,4 MB in vier Grössen; ein Handy lädt pro Bild
+  etwa 100 bis 330 KB.

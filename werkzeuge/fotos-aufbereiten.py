@@ -3,19 +3,19 @@
 
 Nimmt Originale (JPG, auch 20 MB aus der Kamera), dreht sie nach EXIF richtig,
 entfernt die Metadaten (GPS, Kamera) und schreibt WebP in drei Breiten für
-srcset: 2400, 1600 und 900 px. Dazu ein Kontaktbogen zur Auswahl.
+srcset: 3200, 2400, 1600 und 900 px. Dazu ein Kontaktbogen zur Auswahl.
 
     python3 werkzeuge/fotos-aufbereiten.py ORDNER_MIT_ORIGINALEN fotos/auftrag
 
-Ergebnis: fotos/auftrag/NAME-2400.webp, -1600.webp, -900.webp und
+Ergebnis: fotos/auftrag/NAME-3200.webp, -2400.webp, -1600.webp, -900.webp und
 fotos/auftrag/kontaktbogen.jpg. Die Originale bleiben, wo sie sind, und
 kommen nicht ins Repository.
 """
 import sys, pathlib
 from PIL import Image, ImageOps, ImageDraw
 
-BREITEN = (2400, 1600, 900)
-QUALITAET = 78
+BREITEN = (3200, 2400, 1600, 900)
+QUALITAET = 82
 
 def aufbereiten(quelle: pathlib.Path, ziel: pathlib.Path):
     ziel.mkdir(parents=True, exist_ok=True)
