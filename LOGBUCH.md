@@ -194,3 +194,17 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   px, hell und dunkel, Desktop, ohne Skriptfehler. Renderings
   `entwuerfe/bilder/karte-duenn-ohne-*.jpg`. Offen: Adrian wählt dünn oder
   ohne; heute steht dünn als Vorgabe in Entwurf E.
+- [ ] **VES-023** · 03.11.2026 · **Zweiter Fotosatz aus Dropbox** (Adrian:
+  Link auf den Ordner «Baustelle Sändu 2», «Kannst du hier draufgreifen?»).
+  Erreichbar, als ZIP 2,1 GB, 109 JPG, Sony ILCE-7M4, 04.09.2025, 09:30 bis
+  13:30. Inhalt: fertige Anlage auf den Dächern eines
+  Landwirtschaftsbetriebs. Hallen mit grossen Modulflächen in der
+  Landschaft, ein Feldweg zum Hof, der Hofhund, zwei Monteure im
+  VeSa-Shirt auf dem Hofplatz und ab 13:27 auf dem Dach zwischen
+  Modulreihen und Lüftungshauben. Keine Montageaufnahmen. Sicher entpackt,
+  Kontaktbögen erstellt, ZIP gelöscht. Nichts davon im öffentlichen
+  Repository, weil die Bilder den Hof erkennbar zeigen (Hofschild).
+  Vorschlag: Referenz mit Datenblatt und zwei Slider-Bilder (A7407673
+  Monteur am Dachfirst zwischen den Modulen, A7407664 Modulfeld mit Wald).
+  Offen: Adrian sagt, wofür; Ort, Module, kWp und das Einverständnis des
+  Hofs.
