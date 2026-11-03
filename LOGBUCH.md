@@ -180,3 +180,17 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Adrian nimmt die Drive-Freigabe zurück. Desktop: Beim Unterbau-Bild liegt
   der Monteur unter dem Text, weil das Foto keinen Spielraum nach rechts
   hat.
+- [ ] **VES-022** · 03.11.2026 · **Balken weg, Karte dünn oder ohne**
+  (Adrian, Bildschirmfoto vom Handy mit eingekreister Karte: «Balken
+  entfernen. Auch der obere Balken ist dick. Zeig mir den Balken dünner und
+  einmal ganz ohne nur als Bild»). Die Balken unter dem Kopf (Drohne, Team,
+  Pilot, Unterbau, Start) sind entfernt, Markup und Stil. Der Slider wechselt
+  weiter alle 6 s und lässt sich wischen. Die Karte oben rechts ist jetzt
+  eine dünne Zeile: Uhrzeit in Mono, Titel, Pfeil, halb durchsichtig
+  hinterlegt, 29 px hoch statt rund 90 px; zu lange Titel werden mit «…»
+  gekürzt statt abgeschnitten (Adrians Bildschirmfoto zeigte den Titel
+  rechts abgeschnitten). Die Karte zeigt nur noch die Uhrzeit, ohne Datum
+  und Zusatz. Variante ohne Karte über `?cap=ohne`. Geprüft auf 375 und 390
+  px, hell und dunkel, Desktop, ohne Skriptfehler. Renderings
+  `entwuerfe/bilder/karte-duenn-ohne-*.jpg`. Offen: Adrian wählt dünn oder
+  ohne; heute steht dünn als Vorgabe in Entwurf E.
