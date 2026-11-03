@@ -208,3 +208,17 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Monteur am Dachfirst zwischen den Modulen, A7407664 Modulfeld mit Wald).
   Offen: Adrian sagt, wofür; Ort, Module, kWp und das Einverständnis des
   Hofs.
+- [x] **VES-024** · 03.11.2026 · **Erstes Slider-Bild getauscht** (Adrian
+  schickt ein Bild: «verwende dieses, das andere ist unscharf. etwas
+  hineinzoomen wegen des Kamins»). Das Bild ist A7408112 (10:10, per
+  Bildvergleich gefunden, Übereinstimmung 0,98), es ersetzt A7408094 als
+  erstes Bild «Module kommen per Drohne aufs Dach», gleicher Moment, das
+  Modul schwebt über dem Team. Aus dem Original zugeschnitten: 80 % der
+  Fläche, links 20 % weg, damit der Kamin nur noch am Rand steht, oben
+  bündig, damit das Modul ganz bleibt. Aufbereitet als
+  `fotos/auftrag/modul-annahme-*.webp`, die alten Dateien
+  `drohne-anflug-*.webp` entfernt, Kontaktbogen neu. Uhrzeit in der Karte
+  jetzt 10:10. Geprüft auf 375 und 390 px und Desktop, hell und dunkel,
+  keine fehlenden Dateien, keine Skriptfehler. Annahme: «das andere» meint
+  das erste Bild mit demselben Motiv; falls das Team-Bild gemeint war, ist
+  der Tausch ein Schritt.
