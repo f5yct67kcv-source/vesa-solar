@@ -218,12 +218,12 @@ html[data-cap="ohne"] .cap{display:none}
 
 <div class="hero2" id="hero">
  <div class="slides" id="slides">
-  <figure class="slide on" data-t="Module kommen per Drohne aufs Dach" data-s="10:10" style="--d:50% 18%;--m:52% 20%"><img src="../fotos/auftrag/modul-annahme-1600.webp" srcset="../fotos/auftrag/modul-annahme-900.webp 900w, ../fotos/auftrag/modul-annahme-1600.webp 1600w, ../fotos/auftrag/modul-annahme-2400.webp 2400w, ../fotos/auftrag/modul-annahme-3840.webp 3840w" sizes="(max-width: 900px) 760px, 100vw" alt="Ein Solarmodul schwebt an der Drohne heran, drei Monteure auf dem Gerüst strecken die Hände danach"></figure>
+  <figure class="slide on" data-t="Module kommen per Drohne aufs Dach" data-s="09:52" style="--d:60% 40%;--m:64% 40%"><img src="../fotos/auftrag/drohne-anflug-1600.webp" srcset="../fotos/auftrag/drohne-anflug-900.webp 900w, ../fotos/auftrag/drohne-anflug-1600.webp 1600w, ../fotos/auftrag/drohne-anflug-2400.webp 2400w, ../fotos/auftrag/drohne-anflug-3840.webp 3840w" sizes="(max-width: 900px) 760px, 100vw" alt="Ein Solarmodul hängt an der Drohne, das Team nimmt es auf dem Gerüst an"></figure>
   <figure class="slide" data-t="Der Pilot fliegt vom Kamin aus" data-s="09:44" style="--d:55% 40%;--m:52% 45%"><img src="../fotos/auftrag/pilot-kamin-1600.webp" srcset="../fotos/auftrag/pilot-kamin-900.webp 900w, ../fotos/auftrag/pilot-kamin-1600.webp 1600w, ../fotos/auftrag/pilot-kamin-2400.webp 2400w, ../fotos/auftrag/pilot-kamin-3840.webp 3840w" sizes="(max-width: 900px) 760px, 100vw" alt="Der Drohnenpilot sitzt mit Helm und Fernsteuerung auf dem Kamin" loading="lazy"></figure>
   <figure class="slide" data-t="Unterbau ab halb acht" data-s="07:33" style="--d:50% 40%;--m:52% 40%"><img src="../fotos/auftrag/unterbau-morgen-1600.webp" srcset="../fotos/auftrag/unterbau-morgen-900.webp 900w, ../fotos/auftrag/unterbau-morgen-1600.webp 1600w, ../fotos/auftrag/unterbau-morgen-2400.webp 2400w, ../fotos/auftrag/unterbau-morgen-3840.webp 3840w" sizes="(max-width: 900px) 760px, 100vw" alt="Ein Monteur schraubt die Schienen der Unterkonstruktion auf das Ziegeldach" loading="lazy"></figure>
   <figure class="slide" data-t="Drohne startklar" data-s="09:06" style="--d:62% 50%;--m:74% 50%"><img src="../fotos/auftrag/drohne-startklar-1600.webp" srcset="../fotos/auftrag/drohne-startklar-900.webp 900w, ../fotos/auftrag/drohne-startklar-1600.webp 1600w, ../fotos/auftrag/drohne-startklar-2400.webp 2400w, ../fotos/auftrag/drohne-startklar-3840.webp 3840w" sizes="(max-width: 900px) 760px, 100vw" alt="Zwei Männer stehen auf einer Wiese neben der startklaren Transportdrohne" loading="lazy"></figure>
  </div>
- <a class="cap" href="#system" id="cap"><span id="cap-s">10:10</span><b id="cap-t">Module kommen per Drohne aufs Dach</b><span class="cap-l">→</span></a>
+ <a class="cap" href="#system" id="cap"><span id="cap-s">09:52</span><b id="cap-t">Module kommen per Drohne aufs Dach</b><span class="cap-l">→</span></a>
  <div class="live" id="live">
    <div class="t"><b>Live · Boniswil</b><span id="lv-time">–</span></div>
    <div class="sun"><svg viewBox="0 0 260 70" id="sunpath"></svg></div>
@@ -482,10 +482,6 @@ sonnendach($('sdq').value);
 /* ---------- Kopf: Foto (1) oder Slider (2) ---------- */
 (function(){
  const q=new URLSearchParams(location.search), mode=q.get('hero')||'2', r=document.documentElement; r.dataset.hero=mode; if(q.get('cap')) r.dataset.cap=q.get('cap');
- if(q.get('erstes')==='113'){ const f=document.querySelector('.slide'), im=f.querySelector('img'), b='../fotos/auftrag/modul-griff';
-  im.srcset=b+'-900.webp 900w, '+b+'-1600.webp 1600w, '+b+'-2400.webp 2400w, '+b+'-3840.webp 3840w'; im.src=b+'-1600.webp';
-  im.alt='Ein Monteur greift mit beiden Händen nach dem Solarmodul, das die Drohne heranbringt';
-  f.style.setProperty('--d','55% 72%'); f.style.setProperty('--m','50% 40%'); }
  const hero=document.getElementById('hero'), slides=[...document.querySelectorAll('.slide')], bars=[...document.querySelectorAll('#bars button')];
  const capT=document.getElementById('cap-t'), capS=document.getElementById('cap-s');
  const DUR=6000; let i=0, tm=null;

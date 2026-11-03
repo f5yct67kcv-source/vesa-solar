@@ -273,3 +273,16 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   Slider (erstes Bild 112, vier Bilder nach VES-027): Desktop 1440 px und
   Handy 375/390 px, hell und dunkel, ohne Skriptfehler. Die Wahl dünn oder
   ohne bleibt offen (VES-022).
+- [x] **VES-029** · 03.11.2026 · **Erstes Bild wieder A7408094** (Adrian,
+  zum Vergleich aus VES-028: «nein das bild nehmen wo ich geschickt habe im
+  beispiel!»). Gemeint ist das Bild aus dem alten Vergleich: A7408094
+  «Module kommen per Drohne aufs Dach», 09:52, drei Monteure auf dem Gerüst,
+  das Modul hängt schräg an der Drohne. Die Annahme aus VES-024 war falsch:
+  A7408112 sollte nicht A7408094 ersetzen. A7408094 ist neu aufbereitet,
+  ganzes Bild, nachgeschärft, 900 bis 3840 px
+  (`fotos/auftrag/drohne-anflug-*.webp`). Entfernt: A7408112
+  (`modul-annahme-*`) und A7408113 (`modul-griff-*`, `?erstes=113`). Damit
+  ist die Wahl aus VES-026 hinfällig. Beide lassen sich aus dem Verlauf
+  zurückholen. Kontaktbogen und Vergleich `karte-duenn-ohne-*.jpg` sind neu.
+  Geprüft auf 390 px (lädt 2400 px) und 1920 px Retina (lädt 3840 px),
+  ohne fehlende Dateien und ohne Skriptfehler.
