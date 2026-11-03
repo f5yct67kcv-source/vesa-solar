@@ -137,3 +137,20 @@ Die Vorgeschichte steht im formateins-Logbuch unter ENT-078 bis ENT-082.
   sofort). Renderings `entwuerfe/bilder/kopf-*.jpg`. Offen: Adrian wählt
   Foto oder Slider, dann kommt es in Entwurf E. Später mit den eigenen
   Auftragsfotos (VES-012).
+- [x] **VES-019** · 03.11.2026 · **Slider gewählt** (Adrian: «Slider mit
+  meinen Fotos»), schliesst die Wahl aus VES-018. Der Slider steckt jetzt in
+  `entwuerfe/entwurf-e.html`, vorerst mit den vier Fotos von der heutigen
+  VeSa-Seite. `entwurf-e-hero.html` bleibt als Beleg. Neues Skript
+  `werkzeuge/fotos-aufbereiten.py`: dreht Originale nach EXIF, entfernt die
+  Metadaten (GPS, Kamera), schreibt WebP in 2400, 1600 und 900 px für
+  `srcset` und einen Kontaktbogen zur Auswahl. An zwei Fotos geprüft.
+  Renderings von E neu, hell und dunkel, ohne Skriptfehler.
+- [ ] **VES-020** · 03.11.2026 · **Adrians Fotos in den Slider**. Weiterhin
+  blockiert wie in VES-012: Der Drive-Ordner «VESA Solar» ist privat (Google
+  leitet auf die Anmeldung um, um 12:20 erneut geprüft), und der
+  Drive-Zugang dieser Sitzung bricht bei Dateien ab etwa 6 MB ab. Wege:
+  Ordner per Link freigeben, oder 8 bis 12 ausgewählte Fotos direkt im
+  Repository hochladen (GitHub, Ordner `fotos/originale/`, Upload im
+  Browser bis 25 MB pro Datei). Danach Skript laufen lassen, Kontaktbogen
+  zeigen, Adrian wählt die vier bis sechs Slider-Bilder und je Bild Ort,
+  Dachart und Modulzahl. Originale danach wieder aus dem Repository.

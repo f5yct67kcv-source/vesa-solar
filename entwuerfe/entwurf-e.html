@@ -155,6 +155,58 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
  .steps{grid-template-columns:1fr 1fr} .cta .box{padding:44px 18px} .cta .box:first-child{border-right:0;border-bottom:1px solid #4d4d4d}
  section{padding:60px 0} .sec-h{flex-direction:column;align-items:flex-start}
 }
+
+/* ===== Kopf mit Foto (1) oder Slider (2) ===== */
+.hero2{position:relative;background:#1a1a1a;color:#fff;overflow:hidden;min-height:min(88vh,820px);display:flex;align-items:flex-end}
+.slides{position:absolute;inset:0}
+.slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06);transition:transform 7s linear}
+.slide.on img{transform:scale(1)}
+.hero2::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(26,26,26,.92) 0%,rgba(26,26,26,.7) 34%,rgba(26,26,26,0) 62%),linear-gradient(0deg,rgba(26,26,26,.85) 0%,rgba(26,26,26,0) 40%)}
+.h2txt{position:relative;z-index:2;width:100%;padding:0 0 40px}
+.h2txt .kicker{color:#b3b3b3}
+.h2txt h1{color:#fff;max-width:13ch}
+.h2txt p{max-width:44ch;margin:22px 0 28px;font-size:19px;color:#e6e6e6}
+.h2txt .btn{border-color:#fff;color:#fff}
+.h2txt .btn.p{background:#fff;color:#000}
+.trust{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:26px;color:#cccccc;font-size:16px;align-items:center}
+.trust b{color:#fff;font-weight:600}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.03em;border:1px solid rgba(255,255,255,.3);padding:5px 10px;border-radius:999px;color:#fff}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;margin-right:7px;animation:blink 1.6s infinite;vertical-align:1px}
+.bars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px;max-width:760px}
+.bars button{background:none;border:0;color:#999999;font:inherit;font-size:16px;text-align:left;padding:0;cursor:pointer}
+.bars button.on,.bars button:hover{color:#fff}
+.bars i{display:block;height:3px;background:rgba(255,255,255,.25);margin-top:10px;overflow:hidden}
+.bars u{display:block;height:100%;width:0;background:#fff}
+.bars button.done u{width:100%}
+.bars button.on u{animation:fill var(--dur,6s) linear forwards}
+.paused .bars button.on u{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.cap{position:absolute;z-index:3;right:0;top:0;background:var(--bg);color:var(--fg);padding:14px 20px 16px;min-width:260px}
+.cap b{display:block;font-size:19px;font-weight:600}
+.cap span{color:var(--mute);font-size:15px}
+.hero2 .live{z-index:3;top:auto;bottom:40px;right:32px}
+html[data-hero="1"] .bars{display:none}
+@media(max-width:900px){
+ .hero2{display:block;min-height:0}
+ .slides{position:relative;height:50vh;min-height:330px;max-height:500px}
+ .hero2::after{background:linear-gradient(180deg,rgba(26,26,26,0) 0%,rgba(26,26,26,0) 38%,rgba(26,26,26,.88) 72%,#1a1a1a 92%);height:calc(50vh + 30px);max-height:540px;bottom:auto}
+ .h2txt{margin-top:-15vh;padding:0 0 22px}
+ .h2txt .kicker{font-size:11.5px;margin-bottom:12px} .h2txt .kicker .k-lang{display:none}
+ .h2txt h1{font-size:40px}
+ .h2txt p{display:none}
+ .h2txt .btns{margin-top:22px;display:block}
+ .h2txt .btn.p{display:block;text-align:center;border-radius:999px;padding:18px 24px;font-size:18px}
+ .h2txt .btn.s2{display:none}
+ .trust{margin-top:18px;font-size:14.5px;gap:8px 16px} .chip .c-lang{display:none}
+ .bars{gap:10px;margin-top:24px}
+ .bars button{font-size:14.5px}
+ .cap{min-width:0;max-width:72%;padding:10px 16px 12px}
+ .cap b{font-size:17px} .cap span{font-size:14px}
+ .hero2 .live{display:none}
+}
+@media (prefers-reduced-motion:reduce){.slide,.slide img{transition:none}.bars button.on u{animation:none;width:100%}}
 </style>
 </head>
 <body>
@@ -174,16 +226,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
  <div class="mob-sw"><span>Darstellung</span><button class="sw" type="button" aria-label="Hell oder dunkel"><span class="lbl-l">Hell</span><i></i><span class="lbl-d">Dunkel</span></button></div>
 </div></header>
 
-<div class="hero"><div class="wrap">
- <div class="txt">
-  <div class="kicker">Photovoltaik-Montage · Boniswil AG · schweizweit</div>
-  <h1>Wir sind die, die auf dem Dach stehen.</h1>
-  <p>Kein Verkäufer, der die Montage weitergibt. Sandro und sein Team montieren seit 15 Jahren Solaranlagen, vom Einfamilienhaus bis zur Halle. Sauber, sicher, termingerecht.</p>
-  <div class="btns"><a class="btn p" href="#dach">Dein Dach prüfen</a><a class="btn" href="#system">Wie wir montieren</a></div>
+<div class="hero2" id="hero">
+ <div class="slides" id="slides">
+  <figure class="slide on" data-t="Luzern · Steildach" data-s="189 Module"><img src="../fotos/monteur-dach.webp" alt="Zwei Monteure tragen ein Modul über ein Ziegeldach in Luzern" style="object-position:58% 30%"></figure>
+  <figure class="slide" data-t="Muri AG · Flachdach" data-s="292 Module"><img src="../fotos/muri-halle.webp" alt="Flachdach in Muri mit 292 Modulen von oben" style="object-position:50% 50%"></figure>
+  <figure class="slide" data-t="Spreitenbach · Industrie" data-s="640 Module"><img src="../fotos/keller-spreitenbach.webp" alt="Industriehalle in Spreitenbach mit Solaranlage" style="object-position:50% 45%"></figure>
+  <figure class="slide" data-t="Zürich · Indach" data-s="72 Module"><img src="../fotos/letzigraben.webp" alt="Mehrfamilienhaus in Zürich mit Indach-Anlage" style="object-position:50% 45%"></figure>
  </div>
- <div class="pic">
-  <img src="../fotos/monteur-dach.webp" alt="">
-  <div class="live" id="live">
+ <a class="cap" href="#daecher" id="cap"><b id="cap-t">Luzern · Steildach</b><span><span id="cap-s">189 Module</span> · alle 120 Dächer ansehen →</span></a>
+ <div class="live" id="live">
    <div class="t"><b>Live · Boniswil</b><span id="lv-time">–</span></div>
    <div class="sun"><svg viewBox="0 0 260 70" id="sunpath"></svg></div>
    <dl>
@@ -195,12 +246,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
    </dl>
    <div class="ok" id="lv-ok">Montagewetter wird geladen …</div>
   </div>
-  <svg class="tri" viewBox="0 0 220 190" aria-hidden="true">
-   <polygon points="0,190 110,0 220,190" fill="var(--tri)"/>
-   <polygon points="110,0 55,95 165,95" fill="#cccccc"/><polygon points="55,95 82.5,142.5 137.5,142.5" fill="#999999"/><polygon points="55,95 27.5,142.5 82.5,142.5" fill="#b3b3b3"/><polygon points="165,95 137.5,142.5 192.5,142.5" fill="#808080"/><polygon points="0,190 27.5,142.5 55,190" fill="#1a1a1a"/><polygon points="27.5,142.5 55,190 82.5,142.5" fill="#4d4d4d"/><polygon points="82.5,142.5 55,190 110,190" fill="#999999"/><polygon points="82.5,142.5 110,190 137.5,142.5" fill="#808080"/><polygon points="137.5,142.5 110,190 165,190" fill="#cccccc"/><polygon points="137.5,142.5 165,190 192.5,142.5" fill="#b3b3b3"/><polygon points="192.5,142.5 165,190 220,190" fill="#1a1a1a"/>
-  </svg>
- </div>
-</div></div>
+ <div class="h2txt"><div class="wrap">
+  <div class="kicker">Photovoltaik-Montage · Boniswil AG<span class="k-lang"> · schweizweit</span></div>
+  <h1>Wir sind die, die auf dem Dach stehen.</h1>
+  <p>Kein Verkäufer, der die Montage weitergibt. Sandro und sein Team montieren seit 15 Jahren Solaranlagen, vom Einfamilienhaus bis zur Halle.</p>
+  <div class="btns"><a class="btn p" href="#dach">Dein Dach prüfen</a><a class="btn s2" href="#system">Wie wir montieren</a></div>
+  <div class="trust"><span><b>15 Jahre</b> auf dem Dach</span><span>Mitglied Swissolar</span><span class="chip" id="lv-chip">Live · Boniswil</span></div>
+  <div class="bars" id="bars" role="tablist" aria-label="Dächer">
+   <button type="button" role="tab" class="on"><span>Steildach</span><i><u></u></i></button>
+   <button type="button" role="tab"><span>Flachdach</span><i><u></u></i></button>
+   <button type="button" role="tab"><span>Industrie</span><i><u></u></i></button>
+   <button type="button" role="tab"><span>Indach</span><i><u></u></i></button>
+  </div>
+ </div></div>
+</div>
 
 <div class="stats"><div class="wrap">
  <div class="stat"><div class="num">4'800<small>+</small></div><span>Module montiert</span></div>
@@ -368,6 +427,7 @@ function tick(){
  const now=new Date(), s=sunPos(now), c=dayCurve(now);
  document.getElementById('lv-time').textContent=fmtT(now);
  document.getElementById('lv-el').textContent=(s.el>0?'+':'')+s.el.toFixed(1)+'°';
+ const chip=document.getElementById('lv-chip'); if(chip) chip.innerHTML='Live<span class="c-lang"> · Boniswil</span> · '+(s.el>0?'Sonne '+Math.round(s.el)+'°<span class="c-lang"> über dem Horizont</span>':'Sonne untergegangen');
  document.getElementById('lv-az').textContent=s.az.toFixed(0)+'° '+azWord(s.az);
  document.getElementById('lv-rs').textContent=(c.rise?fmtT(c.rise):'–')+' / '+(c.set?fmtT(c.set):'–');
  const maxEl=Math.max(...c.pts.map(p=>p[1]));
@@ -431,6 +491,31 @@ sonnendach($('sdq').value);
  function hi(n){layers.forEach((l,i)=>l.style.opacity=(n==null||i==n)?1:.25);items.forEach((it,i)=>it.classList.toggle('on',i==n));}
  items.forEach((it,i)=>{it.onmouseenter=()=>hi(i);it.onclick=()=>hi(i)}); document.getElementById('layers').onmouseleave=()=>hi(2);
  hi(2);
+})();
+</script>
+
+<script>
+/* ---------- Kopf: Foto (1) oder Slider (2) ---------- */
+(function(){
+ const q=new URLSearchParams(location.search), mode=q.get('hero')||'2', r=document.documentElement; r.dataset.hero=mode;
+ const hero=document.getElementById('hero'), slides=[...document.querySelectorAll('.slide')], bars=[...document.querySelectorAll('#bars button')];
+ const capT=document.getElementById('cap-t'), capS=document.getElementById('cap-s');
+ const DUR=6000; let i=0, tm=null;
+ function show(n){
+  i=(n+slides.length)%slides.length;
+  slides.forEach((s,k)=>s.classList.toggle('on',k===i));
+  bars.forEach((b,k)=>{b.classList.toggle('on',k===i);b.classList.toggle('done',k<i);b.setAttribute('aria-selected',k===i);const u=b.querySelector('u');u.style.animation='none';u.offsetWidth;u.style.animation=''});
+  capT.textContent=slides[i].dataset.t; capS.textContent=slides[i].dataset.s;
+  clearTimeout(tm); if(mode==='2'&&!matchMedia('(prefers-reduced-motion:reduce)').matches) tm=setTimeout(()=>show(i+1),DUR);
+ }
+ if(mode==='1'){slides.slice(1).forEach(s=>s.remove());slides.length=1;show(0);return}
+ r.style.setProperty('--dur',DUR/1000+'s');
+ bars.forEach((b,k)=>b.onclick=()=>show(k));
+ let x0=null; const el=document.getElementById('slides');
+ el.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+ el.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(i+(dx<0?1:-1));x0=null});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){clearTimeout(tm);hero.classList.add('paused')}else{hero.classList.remove('paused');show(i)}});
+ show(+(q.get('slide')||0));
 })();
 </script>
 </body></html>
